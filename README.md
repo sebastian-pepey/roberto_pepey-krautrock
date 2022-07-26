@@ -1,18 +1,20 @@
 # roberto pepey krautrock
 Proyecto Final Full Stack Program Digital House
 
+![Logo Krautrock](https://raw.githubusercontent.com/sebastian-pepey/roberto_pepey-krautrock/main/anexos/logo_krautrock_medium.jpg)
+
 ## Bienvenidos al repositorio!
 
 Por medio del presente, se efectuarán las entregas que nuestro cliente, DH Venture Capitals, podrá seguir, en este desarrollo que hemos decidido llamar "krautrock".
 
 El "krautrock" es un género de música rock originado en alemania a finales de los 60s. Se consideró un movimiento vanguardista e intrépido. Es por ello que decidimos llamar a este proyecto con este hermoso nombre, para que sirva como musa inspiradora en nuestro camino.
 
-Links Mockups Funcionales:
+### Links Mockups Funcionales:
 
-### Mobile
+#### Mobile
 https://xd.adobe.com/view/9f5850b8-7ad5-4f08-9182-0f10ea88bed5-ca0b/
 
-### Web
+#### Web
 https://xd.adobe.com/view/e95744ee-3e6c-45c0-a0c6-ca2c82a3cfa4-bc04/
 
 Las pantallas presentadas son las siguientes:
