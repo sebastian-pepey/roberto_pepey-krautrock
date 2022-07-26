@@ -29,11 +29,13 @@ Spring Instrumentos. Tienda local de instrumentos premium, con una estética del
 Mercado Libre. Referente latinoamericano del e-commerce. Su UX y UI son destacables. Un sitio de referencia para extraer nociones de diseño.
 
 Well Strung Guitars. El sitio no impresiona, pero se trata de una de las tiendas con el mejor stock de instrumentos vintage. Encontrar Gibsons Les Paul de 1959 (valuadas en aproximadamente US$250k) es tan común como ver desfilar a los mejores músicos por su salón. Los clientes de esta tienda son exigentes, amantes de la historia y la colección. Es un público al que krautrock les va a caer como slide* al dedo.
-    
+
+*tubo de metal o vidrio, usualmente se coloca en el dedo anular de la mano que toca los acordes en la guitarra, principalmente para tocar blues o derivados. Puede escucharse en "In My Time of Dying" de Led Zeppelin, o "Dust My Broom" de Elmore James.
+
 # integrantes
 Roberto Pepey. Ingeniero Eléctrico, encargado de la programación del sitio. Actualmente trabajando en una empresa de generación eléctrica, con interes de volcarse a la programación de sistemas que faciliten las tareas diarias.
 
 Sebastian Pepey. Amante no correspondido de la música. Encargado del diseño del sitio, así como de la redacción de la documentación.
 
-*tubo de metal o vidrio, usualmente se coloca en el dedo anular de la mano que toca los acordes en la guitarra, principalmente para tocar blues o derivados. Puede escucharse en "In My Time of Dying" de Led Zeppelin, o "Dust My Broom" de Elmore James.
+
 
