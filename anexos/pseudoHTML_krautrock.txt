@@ -1,0 +1,240 @@
+home | sin sesión
+nav
+	nav_arrow
+	nav_option1
+	nav_icon1
+	nav_icon2
+	nav_option2
+
+header
+	header_logo
+	header_background
+
+body
+    body_cta
+            cta_title
+            cta_search
+                cta_search_logo
+                cta_search_input
+                cta_search_input_text
+            cta_transparent
+            
+    body_text
+        carrousel
+            lp
+                lp_image
+                lp_box_image
+                lp_box_description
+                    lp_descripcion			
+                    lp_price
+
+            cs_80
+                cs_80_image
+                cs_80 _box_image
+                cs_80_box_ description
+                    cs_80_descripcion
+                    cs_80 _price
+
+            te_op1
+                te_op1_image
+                te_op1_box_image
+                te_op1_box_ description
+                    te_op1_descripcion			
+                    te_op1_price
+
+
+            cz_101
+                cz_101_image
+                cz_101_box_image
+                cz_101_box_ description
+                    cz_101_descripcion			
+                    cz_101_price
+
+    chart
+            chart_text
+            chart_list
+                chart_option_1
+                chart_option_2
+                chart_option_3
+                chart_option_4
+                chart_option_5
+
+footer
+	cta_sus
+		cta_sus_main_text
+		cta_sus_button
+	
+	menu
+		menu_list
+			menu_text1
+			menu_text2
+			menu_text3
+		
+    menu_sm_list
+        menu_sm1
+            menu_sm1_logo
+            menu_sm1_text
+        menu_sm2
+            menu_sm2_logo
+            menu_sm2_text
+        menu_sm3
+            menu_sm3_logo
+            menu_sm3_text
+
+    logo
+        logo_image
+        logo_text
+
+detalle producto
+nav
+
+header
+    search_bar
+        search_bar_icon
+        search_bar_text
+
+body
+    product_photo
+        product_photo_main_photo
+        carrousel_photo
+            carrousel_photo01
+            carrousel_photo02
+            carrousel_photo03
+
+        product_info
+            producto_info_text
+        
+        seller_info
+            seller_name
+            seller_rating
+        
+        producto_info_price
+        
+        add_cart_button
+
+        buy_button
+
+        favs_button
+
+        product_description
+            product_description_text
+
+        product_specs
+            product_specs01
+            product_specs02
+            product_specs03
+            product_specs04
+	
+footer
+
+carrito
+nav
+
+header
+    search_bar
+
+body
+    cart_title
+    cta
+    shipping_to
+        shipping_to_edit_button
+        shipping_to_text
+        shipping_to_address_value
+        shipping_to_pc_value
+
+    brief_purchase
+        brief_purchase_name_item
+        brief_purchase_name_seller
+        brief_purchase_price
+        brief_purchase_photo
+
+    safe_purchase_adv
+        safe_purchase_adv_icon
+        safe_purchase_adv_text
+
+    delivery_options
+        delivery_options_main_text
+        delivery_options_list
+
+
+    payment_options_list
+        payment_options_title
+        payment_options_icon1
+        payment_options_icon2
+        payment_options_icon3
+    
+    payment
+        payment_form
+
+footer
+
+carrito | compra exitosa
+nav
+
+header
+    search_bar
+
+body
+    purchase_verified
+        verified_icon
+        purchase_verified_text
+
+    shipping_to
+                shipping_to_edit_button
+                shipping_to_text
+                shipping_to_address_value
+                shipping_to_pc_value
+        
+    brief_purchase
+        brief_purchase_name_item
+        brief_purchase_name_seller
+        brief_purchase_price
+        brief_purchase_photo
+            
+    cta_button
+        cta_text
+
+footer
+
+form trabajo
+nav
+
+header
+    search_bar
+
+body
+    info
+        info_title
+        info_paragrapgh
+        info_list
+
+    trabajo_form
+
+footer
+
+form trabajo | envío exitoso
+nav
+
+header
+    search_bar
+
+body
+    form_sent_success
+        verified_icon
+        form_sent_title
+        form_sent_paragraph
+    main_menu_button
+footer
+
+inicio sesion
+nav
+
+header
+    search_bar
+
+body
+    login_form
+    login_button
+
+footer
+
