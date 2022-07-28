@@ -1,7 +1,7 @@
 # roberto pepey krautrock
 Proyecto Final Full Stack Program Digital House
 
-![Logo Krautrock](https://raw.githubusercontent.com/sebastian-pepey/roberto_pepey-krautrock/main/anexos/logo_krautrock_medium.jpg)
+![Logo Krautrock](https://raw.githubusercontent.com/sebastian-pepey/roberto_pepey-krautrock/main/sprint-01/anexos/logo_krautrock_medium.jpg)
 
 ## Bienvenidos al repositorio!
 
