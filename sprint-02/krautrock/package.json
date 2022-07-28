@@ -1,0 +1,29 @@
+{
+  "name": "krautrock",
+  "version": "1.0.0",
+  "description": "e-commerce | venta de instrumentos musicales",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastian-pepey/roberto_pepey-krautrock.git"
+  },
+  "keywords": [
+    "synthesizers",
+    "guitars",
+    "vintage",
+    "music"
+  ],
+  "author": "Roberto Sebastian Pepey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebastian-pepey/roberto_pepey-krautrock/issues"
+  },
+  "homepage": "https://github.com/sebastian-pepey/roberto_pepey-krautrock#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
