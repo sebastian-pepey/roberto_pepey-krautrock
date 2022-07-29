@@ -10,7 +10,7 @@ header
 	header_logo
 	header_background
 
-body
+main
     body_cta
             cta_title
             cta_search
@@ -93,7 +93,7 @@ header
         search_bar_icon
         search_bar_text
 
-body
+main
     product_photo
         product_photo_main_photo
         carrousel_photo
@@ -133,7 +133,7 @@ nav
 header
     search_bar
 
-body
+main
     cart_title
     cta
     shipping_to
@@ -174,7 +174,7 @@ nav
 header
     search_bar
 
-body
+main
     purchase_verified
         verified_icon
         purchase_verified_text
@@ -202,7 +202,7 @@ nav
 header
     search_bar
 
-body
+main
     info
         info_title
         info_paragrapgh
@@ -218,7 +218,7 @@ nav
 header
     search_bar
 
-body
+main
     form_sent_success
         verified_icon
         form_sent_title
@@ -232,7 +232,7 @@ nav
 header
     search_bar
 
-body
+main
     login_form
     login_button
 
