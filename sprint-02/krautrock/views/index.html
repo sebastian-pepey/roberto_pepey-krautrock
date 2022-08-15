@@ -10,18 +10,67 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&family=Yellowtail&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <script>
+        var menuMostrado=0;
+
+        function muestraMenu(){
+            if(menuMostrado===0){
+                cruz();
+                document.getElementById('menu').classList.add('extended');
+                menuMostrado=1;
+            }
+            else{
+                hamburger();
+                document.getElementById('menu').classList.remove('extended');
+                menuMostrado=0;
+            }
+        }
+
+        function cruz(){
+            document.getElementById('line-1').style.transform='translate(0px,9px) rotate(45deg)';
+            document.getElementById('line-1').style.height='3px';
+            document.getElementById('line-1').style.borderRadius='1px';
+            document.getElementById('line-2').style.opacity='0';
+            document.getElementById('line-3').style.height='3px';
+            document.getElementById('line-3').style.borderRadius='1px';
+            document.getElementById('line-3').style.transform='translate(0,-9px) rotate(-45deg)';
+        }
+        
+        function hamburger(){
+            document.getElementById('line-1').style.transform='rotate(0deg) translate(0,0)';
+            document.getElementById('line-1').style.height='5px';
+            document.getElementById('line-1').style.borderRadius='2.5px';
+            document.getElementById('line-2').style.opacity='1';
+            document.getElementById('line-3').style.height='5px';
+            document.getElementById('line-3').style.borderRadius='2.5px';
+            document.getElementById('line-3').style.transform='rotate(0deg) translate(0,0)';
+        }
+        
+    </script>
     <title>krautrock</title>
 </head>
 <body>
     <nav>
-        <h3 class="texto-nav">VENDER</h3>
-        <img class="svg-image" src="img/shopping_cart.svg" alt="shopping_cart">
-        <img class="svg-image" src="img/bell.svg" alt="bell"></h3>
-        <h3 class="texto-nav">INICIAR SESION</h3>
+        <div id="hamburger" onclick="muestraMenu()">
+            <div id="line-1"></div>
+            <div id="line-2"></div>
+            <div id="line-3"></div>
+        </div>
+        <div id="menu">
+            <a href=""><h3 class="texto-nav">VENDER</h3></a>
+            <img class="svg-image" src="img/shopping_cart.svg" alt="shopping_cart">
+            <img class="svg-image" src="img/bell.svg" alt="bell"></h3>
+            <a href="http:/register"><h3 class="texto-nav">REGISTRO</h3></a>
+            <a href="http:/login"><h3 class="texto-nav">INICIAR SESION</h3></a>
+        </div>
     </nav>
 
     <header>
-        <h1 class="title">krautrock</h1>
+        <a href="/"><h1 class="title">krautrock</h1></a>
+        <form class="search-bar" style="visibility:hidden;">  
+            <input type="text" placeholder="Encuentra el instrumento de tus sueños">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
     </header>
 
     <main>
@@ -38,48 +87,47 @@
         <h3>Ofertas por tiempo limitado</h3>
 
         <section class="carrousel">
-            <article>
+            <a href="/product"><article>
                 <img src="img/les_paul.jpg" alt="Gibson Les Paul" class="product_img">
                 <div class="main-article">
                     <h4 class="description">Les Paul Standard</h4>
                     <p class="price">$2500</p>
                     <p class="condition">Segunda Mano - Impecable</p>
                 </div>
-            </article>
+            </article></a>
 
-            <article>
+            <a href="/product"><article>
                 <img src="img/cs_80.jpg" alt="Yamaha_CS-80" class="product_img">
                 <div class="main-article">
                     <h4 class="description">Yamaha CS 80</h4>
                     <p class="price">$25000</p>
                     <p class="condition">Segunda Mano - Muy Bueno</p>
                 </div>
-            </article>
+            </article></a>
 
-            <article>
+            <a href="/product"><article>
                 <img src="img/op1_field.jpeg" alt="TE_OP1_Field" class="product_img">
                 <div class="main-article">
                     <h4 class="description">TE OP1 Field</h4>
                     <p class="price">$15000</p>
                     <p class="condition">Nuevo</p>
                 </div>
-            </article>
+            </article></a>
 
-            <article>
+            <a href="/product"><article>
                 <img src="img/casio_cz101.jpg" alt="Casio_CZ101" class="product_img">
                 <div class="main-article">
                     <h4 class="description">Casio CZ 101</h4>
                     <p class="price">$500</p>
                     <p class="condition">Segunda Mano - Bueno</p>
                 </div>
-            </article>
+            </article></a>
 
         </section>
         <aside>
 
         </aside>
     </main>
-    
     <footer>
             <h2>Suscribite para obtener los mejores descuentos y beneficios!</h2>
             <form class="search-bar">  

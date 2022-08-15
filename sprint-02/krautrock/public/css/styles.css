@@ -3,7 +3,7 @@
     --header: #F3916D;
     --enfasis: #A62B1F;
     --botones: #D96941;
-    --reserva: #214001;
+    --reserva: #e0dede90;
     --correcto: #2E5902;
     --boton: #193C40;
     --background:#3A3838;
@@ -25,13 +25,65 @@
 
 nav{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+nav a h3{
+    margin: 0px 10px;
+}
+
+#hamburger{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+    transition: all 450ms;
+}
+
+#line-1,#line-2,#line-3{
+    width: 40px;
+    height: 5px;
+    border-radius: 2.5px;
+    margin: 2.5px 0px;
+    background-color: var(--background);
+    transition: all 450ms;
+}
+
+#menu{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow: hidden;
+    height: 0px;
+    transition: all 1000ms;
+}
+
+.extended{
+    height: 150px;
 }
 
 header{
     background-color: var(--header);
+    overflow: auto;
+}
+
+header a h1{
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    color: var(--background);
+}
+
+header a h1:visited{
+    color: inherit;
+}
+
+header form{
+    margin: 10px auto;
 }
 
 .title{
@@ -104,13 +156,16 @@ form.search-bar button{
     justify-content: center;
 }
 
-.carrousel article{
-    background-color: var(--claro);
+.carrousel a{
     margin: 10px;
-    width: 40%;
+    padding: 0px;
 }
 
-.carrousel article img{
+.carrousel a article{
+    background-color: var(--claro);
+}
+
+.carrousel a article img{
     width: 90%;
     margin: 10px 5% 5px;
 }
@@ -187,6 +242,98 @@ i.footer-paragraph{
     margin-right: 10px;
 }
 
+.star{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 100px;
+    animation: estrella-crece 500ms;
+}
+
+.number-1{
+    width: 100px;
+    height: 100px;
+    background-color: var(--correcto);
+    position: absolute;
+}
+
+.number-2{
+    width: 100px;
+    height: 100px;
+    background-color: var(--correcto);
+    transform: rotate(45deg);
+    z-index: -1;
+    position: absolute;
+}
+
+.number-3{
+    width: 100px;
+    height: 100px;
+    background-color: var(--correcto);
+    transform: rotate(22.5deg);
+    z-index: -1;
+    position: absolute;
+}
+
+.number-4{
+    width: 100px;
+    height: 100px;
+    background-color: var(--correcto);
+    transform: rotate(-22.5deg);
+    z-index: -1;
+    position: absolute;
+}
+
+.fa-check{
+    color: var(--claro);
+    margin: 15px;
+    font-size: 80px;
+}
+
+@keyframes estrella-crece{
+    0%{transform:scale(0,0)}
+    100%{transform: scale(1,1);}
+}
+
+.background-login{
+    background-image: url("/img/led_zeppelin.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    overflow: auto;
+    margin: 10px 0px;
+}
+
+.register-form{
+    background-color: var(--reserva);
+    padding: 40px;
+    height: 500px;
+    margin: 25px 25px;
+    width: 85%;
+}
+
+main form label, main form input{
+    margin: 10px 0px 5px;
+}
+
+.input-bar{
+    width: 250px;
+    height: 30px;
+    border-width: 0px;
+    border-radius: 3px;
+}
+
+/* main form button{
+    width: 80px;
+    height: 30px;
+    background-color: var(--botones);
+    border-radius: 15px;
+    border-width: 0px;
+    color: var(--claro);
+    margin-top: 10px;
+} */
+
 @media(min-width:768px){
 
     section.cta-main div{
@@ -199,11 +346,69 @@ i.footer-paragraph{
         width: 50%;
     }
 
-    .carrousel article{
+    .carrousel a{
         width: 23%;
     }
 
     .condition{
         display: block;
     }
+
+    main form{
+        width: 40%;
+    }
 }
+
+main div{
+    display: flex;
+}
+
+main div div{
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 50%;
+}
+
+main div div img{
+    height: 90%;
+    width: 90%;
+}
+
+.precio{
+    color: var(--enfasis);
+}
+
+.boton{
+    height: 30px;
+    margin: 5px 0 5px;
+    border-width: 0px;
+}
+
+.largo{
+    width: 310px;
+}
+
+.corto{
+    width: 150px;
+}
+
+#bt-comprar{
+    background-color: var(--botones);
+    color: var(--claro);
+}
+
+#bt-cart{
+    background-color: var(--boton);
+    color: var(--claro);
+    flex: 1 1 auto;
+}
+
+#bt-fav{
+    background-color: var(--claro);
+    color: var(--background);
+    border: solid 2px #000;
+    align-self: flex-end;
+}
+
+
