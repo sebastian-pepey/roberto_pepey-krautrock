@@ -10,25 +10,33 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&family=Yellowtail&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    <title>krautrock</title>
+    <script src="/js/script.js"></script>
+    <title>krautrock | registro</title>
 </head>
 <body>
     <nav>
-        <h3 class="texto-nav">VENDER</h3>
-        <img class="svg-image" src="img/shopping_cart.svg" alt="shopping_cart">
-        <img class="svg-image" src="img/bell.svg" alt="bell"></h3>
-        <a href="http:/register"><h3 class="texto-nav">REGISTRO</h3></a>
-        <a href="http:/login"><h3 class="texto-nav">INICIAR SESION</h3></a>
+        <div id="hamburger" onclick="muestraMenu()">
+            <div id="line-1"></div>
+            <div id="line-2"></div>
+            <div id="line-3"></div>
+        </div>
+        <div id="menu">
+            <a class="link" href=""><h3>VENDER</h3></a>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-bell"></i>
+            <a class="link" href="http:/register"><h3>REGISTRO</h3></a>
+            <a class="link" href="http:/login"><h3>INICIAR SESION</h3></a>
+        </div>
     </nav>
 
     <header>
-        <a href="/"><h1 class="title">krautrock</h1></a>
+        <a class="link" href="/"><h1 class="title">krautrock</h1></a>
         <form class="search-bar">  
             <input type="text" placeholder="Encuentra el instrumento de tus sueños">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="trs-button"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
     </header>
-
+    
     <main class="background-login">
         <form class="register-form" action="/register" method="post">
             <h2>Formulario de Registro</h2>
@@ -49,17 +57,17 @@
             <button type="reset">Reset</button>
         </form>
     </main>
-    
+
     <footer>
-            <h2>Suscribite para obtener los mejores descuentos y beneficios!</h2>
+            <h3>Suscribite para obtener los mejores descuentos y beneficios!</h3>
             <form class="search-bar">  
-                <input type="text" placeholder="Escribe tu correo electrónico">
-                <button class="footer-text">Suscribirse!</button>
+                <input type="email" placeholder="Escribe tu correo electrónico">
+                <button class="rnd-button sht-button button-02">Suscribirse!</button>
             </form>
         <div class="footer-inferior">
             <div class="logo">
                 <img src="img/logo_krautrock.png" alt="logo_krautrock">
-                <p class="footer-text">krautrock es una marca registrada de AiTi GmBH</p>
+                <p>krautrock es una marca registrada de AiTi GmBH</p>
             </div>
             <ul style="list-style-type:none">
                 <li class="footer-paragraph">Empresa</li>
@@ -67,9 +75,9 @@
                 <li class="footer-paragraph">Trabajá con nosotros!</li>
             </ul>
             <ul style="list-style-type:none">
-                <li><i class="footer-paragraph fa-brands fa-whatsapp"></i><p class="footer-paragraph">WhatsApp</p></li>
-                <li><i class="footer-paragraph fa-solid fa-at"></i><p class="footer-paragraph">krautrock@aiti.de</p></li>
-                <li><i class="footer-paragraph fa-brands fa-instagram"></i><p class="footer-paragraph">instagram.com/kr</p></li>
+                <li><i class="footer-paragraph fa-brands fa-whatsapp"></i>WhatsApp</li>
+                <li><i class="footer-paragraph fa-solid fa-at"></i>krautrock@aiti.de</li>
+                <li><i class="footer-paragraph fa-brands fa-instagram"></i>instagram.com/kr</li>
             </ul>  
         </div>    
     </footer>
