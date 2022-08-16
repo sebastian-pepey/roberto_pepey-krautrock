@@ -9,6 +9,10 @@ Por medio del presente repositorio, se efectuarán las entregas que nuestro clie
 
 El "krautrock" es un género de música rock originado en alemania a finales de los 60s. Se consideró un movimiento vanguardista e intrépido. Es por ello que decidimos llamar a este proyecto con este hermoso nombre, para que sirva como musa inspiradora en nuestro camino.
 
+### Link front en Heroku:
+
+https://krautrock.herokuapp.com/
+
 ### Links Mockups Funcionales:
 
 Al wireframe le sumamos un Mockup con la vista tentativa del sitio, empleando Adobe XD para realizar un modelo con funcionalidades reducidas.
