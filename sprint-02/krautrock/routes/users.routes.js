@@ -2,7 +2,7 @@ const express=require('express');
 
 const usersRouter=express.Router();
 
-const usersController=require('../controller/usersController');
+const usersController=require('../controller/users.controller');
 
 usersRouter.get('/',usersController.index);
 
