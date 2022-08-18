@@ -21,9 +21,6 @@
 
 html{
     font-size: 62.5%;
-}
-
-h1,h2,h3,p,label,li{
     font-family:'Lato', sans-serif;
 }
 
@@ -47,8 +44,12 @@ h4,p,li{
     font-size: 1.9rem;
 }
 
-h5,footer li,label{
+h5,footer li,label,button{
     font-size: 1.8rem;
+}
+
+button,a{
+    font-size: 1.5rem;
 }
 
 h6{
@@ -76,17 +77,14 @@ h6{
 
 .lrg-button{
     width: max(15%,20rem);
-    font-size: 1.5rem;
 }
 
 .med-button{
     width: max(10%,15rem);
-    font-size: 1.5rem;
 }
 
 .sht-button{
-    width: max(9%,13rem);
-    font-size: 1.5rem;
+    width: max(9%,13rem); 
 }
 
 .trs-button{
@@ -153,6 +151,25 @@ nav a h3{
     height: 0;
     transition: all 700ms;
     margin: 0 0.5rem 0;
+}
+
+.cart{
+    position: relative;
+}
+
+.notification{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--enfasis);
+    border-radius: 0.3rem;
+    color: var(--claro);
+    font-size: 1rem;
+    position: absolute;
+    top: -0.3rem;
+    left: 1.9rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
 }
 
 header{
@@ -235,10 +252,9 @@ section.cta-login div{
 .ranking-list{
     background-color: var(--header);
     border-radius: 0.5rem;
-    width: 100%;
+    width: 90%;
     overflow: auto;
     padding: 2rem;
-    margin: 1rem;
 }
 
 .ranking-list ol, .ranking-list h2{
@@ -354,6 +370,12 @@ section.cta-main div h1{
 .line-arrange{
     display: flex;
     justify-content: space-between;
+}
+
+.line-arrange a{
+    text-align: center;
+    text-decoration: none;
+    padding-top: 0.5rem;
 }
 
 footer{
@@ -646,6 +668,10 @@ i.footer-paragraph{
         width: 45%;
     }
 
+    .notification{
+        top: -0.5rem;
+        left: 2.8rem;
+    }
 }
 
 @media(min-width:1024px){
