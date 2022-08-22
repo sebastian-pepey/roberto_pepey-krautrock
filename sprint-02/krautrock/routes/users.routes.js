@@ -4,8 +4,6 @@ const usersRouter=express.Router();
 
 const usersController=require('../controller/users.controller');
 
-usersRouter.get('/',usersController.index);
-
 usersRouter.get('/login',usersController.login);
 
 usersRouter.get('/register',usersController.register);

@@ -9,6 +9,8 @@ const usersRouter=require(path.join(__dirname,"/routes/users.routes"));
 //MIDDLEWARE
 app.use(express.static(path.join(__dirname, "/public")))
 
+app.set('view engine','ejs');
+
 app.set('puerto',process.env.PORT || 3000);
 
 //RUTAS

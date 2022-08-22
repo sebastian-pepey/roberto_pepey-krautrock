@@ -1,9 +1,17 @@
 const path=require('path');
 
+const products=require('../data/productsDataBase.json')
+
 const productsController={
 
+    index: (req,res)=>{
+        res.render('index',{products});
+    },
+
     product: (req,res)=>{
-        res.sendFile(path.join(__dirname,'../views/product.html'));
+        const productToShow=products.find(e=>e.id===parseInt(req.params.id))
+
+        res.render('product',{productToShow})
     },
 
     cart: (req,res)=>{

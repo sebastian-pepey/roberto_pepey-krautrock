@@ -515,27 +515,8 @@ i.footer-paragraph{
 
 .small-pic{
     width: 25%;
-    height: 9rem;
-}
-
-.pic-01{
-    background-image: url("/img/cs_80.jpg");
-    background-size: cover;
-}
-
-.pic-02{
-    background-image: url("/img/cs_80_01.jpg");
-    background-size: cover;
-}
-
-.pic-03{
-    background-image: url("/img/cs_80_02.jpg");
-    background-size: cover;
-}
-
-.pic-04{
-    background-image: url("/img/cs_80_03.jpg");
-    background-size: cover;
+    height: 10rem;
+    object-fit: cover;
 }
 
 #product-item{
