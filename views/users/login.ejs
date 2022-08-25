@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&family=Yellowtail&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <script src="/js/script.js"></script>
+    <title>krautrock | login</title>
+</head>
+<body>
+    
+    <!-- nav -->
+    <%- include('../partials/nav')%>
+
+    <!-- header -->
+    <%- include('../partials/header')%>
+
+    <main>
+        <section class="cta-login">
+            <div class="login">
+                <h2>Iniciar sesión</h2>
+                <form action="/users/login" method="post">  
+                    <input type="text" placeholder="Ingrese usuario"><br>
+                    <input type="password" placeholder="Ingrese contraseña"><br>
+                    <label><input id="checkbox" type="checkbox" name="remain-connected">Permanecer conectado</label>
+                    <button class="rnd-button med-button button-01">Ingresar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <!-- footer -->
+    <%- include('../partials/footer')%>
+
+</body>
+</html>

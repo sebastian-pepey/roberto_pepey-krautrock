@@ -14,11 +14,12 @@
     <title>krautrock | main</title>
 </head>
 <body>
+
     <!-- nav -->
-    <%- include('./partials/nav')%>
+    <%- include('../partials/nav')%>
 
     <!-- header -->
-    <%- include('./partials/header')%>
+    <%- include('../partials/header')%>
 
     <main>
         <section class="cta-main">
@@ -35,8 +36,8 @@
                 <h2>Ofertas por tiempo limitado</h2>
                 <section class="carrousel">
                     <%for(p of products){%>
-                        <%- include('./partials/article')%>
-                    <%}%> 
+                        <%- include('../partials/article')%>
+                    <%}%>
                 </section>
             </section>
     
@@ -54,8 +55,7 @@
     </main>
 
     <!-- footer -->
-
-    <%- include('./partials/footer')%>
+    <%- include('../partials/footer')%>
 
 </body>
 </html>
