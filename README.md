@@ -11,7 +11,7 @@ El "krautrock" es un género de música rock originado en alemania a finales de 
 
 ### Link front en Heroku:
 
-https://krautrock.herokuapp.com/
+https://krautrock.herokuapp.com/products
 
 ### Links Mockups Funcionales:
 
