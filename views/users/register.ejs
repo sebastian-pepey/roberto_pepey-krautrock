@@ -16,18 +16,26 @@
         <div class="register-form">
             <div class="container">
                 <form action="/users/register" method="post">
+                    
                     <h3>Formulario de Registro</h3>
                     <input name="name" placeholder="Nombre y Apellido" required><br>
                     
-                    <input name="user-name" placeholder="Nombre de Usuario" required><br>
-                    
                     <label for>Fecha de nacimiento</label><br>
-                    <input type="date" value="1900-01-01" required><br>
+                    <input name="birthDate" type="date" value="1900-01-01" required><br>
 
-                    <input type="text" name="address" placeholder="Domicilio" required><br>
+                    <input name="userName" placeholder="Nombre de Usuario" required><br>
+                
+                    <input name="email" type="email" placeholder="Correo electrónico" required><br>
                     
+                    <input name="phone" type="tel" placeholder="Teléfono" required><br>
+                    
+                    <input name="location" type="text" placeholder="Domicilio" required><br>
+                    
+                    <input name="country" type="text" placeholder="Pais" required><br>
+
                     <label>Foto de usuario</label><br>
                     <input type="file" name="avatar" accept=".jpg"><br>
+
                     <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="La contraseña debe contener al menos 8 caracteres, al menos una mayúscula y al menos una minúscula" placeholder="Ingrese contraseña" required><br>
                     <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="La contraseña debe contener al menos 8 caracteres, al menos una mayúscula y al menos una minúscula" placeholder="Confirme contraseña" required><br>
                     <div class="line-arrange">

@@ -1,1 +1,118 @@
-[{"id":1996622,"name":"TE OP1 Field","price":"2200","used":false,"userId":1,"quantity":1,"sold":false,"image":["op1_field_00.jpeg","op1_field_01.jpeg","op1_field_02.jpeg","op1_field_03.jpeg","op1_field_04.jpeg"],"description":"Sintetizador polifónico modelo 2021. Se hacen envíos a todo el país y al mundo. Garantía de 6 meses."},{"id":1887997,"name":"Yamaha CS 80","price":"65000","used":true,"userId":1,"quantity":1,"sold":false,"image":["cs_80_00.jpg","cs_80_01.jpg","cs_80_02.jpg","cs_80_03.jpg","cs_80_04.jpg"],"description":"Sintetizador polifónico - SN 1999, año 1976. Con todas sus funciones, calibrado por un especialista. Se hacen envíos a todo el país y al mundo. Garantía de 6 meses."},{"id":1799764,"name":"Casio CZ 101","price":"500","used":true,"userId":2,"quantity":1,"sold":false,"image":["casio_cz101_00.jpg","casio_cz101_01.jpg","casio_cz101_02.jpg","casio_cz101_03.jpg","casio_cz101_04.jpg"],"description":"Sintetizador polifónico año 1985. Con todas sus funciones, calibrado por un especialista. Se hacen envíos a todo el país y al mundo. Garantía de 6 meses."},{"id":1799765,"name":"Les Paul Standard 2010","price":"2500","used":false,"userId":2,"quantity":"2","description":"Les Paul Standard de 2010. Impecable. Calibrada y con cuerdas nuevas. Envíos al país y al mundo!","image":["les_paul_00.jpg","les_paul_01.jpg","les_paul_02.jpg","les_paul_03.jpg","les_paul_04.jpg"],"sold":false},{"id":1799766,"name":"Producto Prueba 1","price":"1000","used":"true","userId":2,"quantity":"5","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","image":["default-image.png","default-image.png","default-image.png","default-image.png","default-image.png"],"sold":false},{"id":1799767,"name":"Producto Prueba 2","price":"2000","used":false,"userId":2,"quantity":"15","description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","image":["default-image.png","default-image.png","default-image.png","default-image.png","default-image.png"],"sold":false},{"id":1799768,"name":"Guitarra","price":"1500","used":"false","userId":2,"quantity":"7","description":"Guitarra criolla marca de Olla baratísima.","image":["default-image.png","default-image.png","default-image.png","default-image.png","default-image.png"],"sold":false}]
+[
+    {
+        "id": 1996622,
+        "name": "TE OP1 Field",
+        "price": "2200",
+        "used": false,
+        "userId": 1,
+        "quantity": 1,
+        "sold": false,
+        "image": [
+            "op1_field_00.jpeg",
+            "op1_field_01.jpeg",
+            "op1_field_02.jpeg",
+            "op1_field_03.jpeg",
+            "op1_field_04.jpeg"
+        ],
+        "description": "Sintetizador polifónico modelo 2021. Se hacen envíos a todo el país y al mundo. Garantía de 6 meses."
+    },
+    {
+        "id": 1887997,
+        "name": "Yamaha CS 80",
+        "price": "65000",
+        "used": true,
+        "userId": 1,
+        "quantity": 1,
+        "sold": false,
+        "image": [
+            "cs_80_00.jpg",
+            "cs_80_01.jpg",
+            "cs_80_02.jpg",
+            "cs_80_03.jpg",
+            "cs_80_04.jpg"
+        ],
+        "description": "Sintetizador polifónico - SN 1999, año 1976. Con todas sus funciones, calibrado por un especialista. Se hacen envíos a todo el país y al mundo. Garantía de 6 meses."
+    },
+    {
+        "id": 1799764,
+        "name": "Casio CZ 101",
+        "price": "500",
+        "used": true,
+        "userId": 2,
+        "quantity": 1,
+        "sold": false,
+        "image": [
+            "casio_cz101_00.jpg",
+            "casio_cz101_01.jpg",
+            "casio_cz101_02.jpg",
+            "casio_cz101_03.jpg",
+            "casio_cz101_04.jpg"
+        ],
+        "description": "Sintetizador polifónico año 1985. Con todas sus funciones, calibrado por un especialista. Se hacen envíos a todo el país y al mundo. Garantía de 6 meses."
+    },
+    {
+        "id": 1799765,
+        "name": "Les Paul Standard 2010",
+        "price": "2500",
+        "used": false,
+        "userId": 2,
+        "quantity": "2",
+        "description": "Les Paul Standard de 2010. Impecable. Calibrada y con cuerdas nuevas. Envíos al país y al mundo!",
+        "image": [
+            "les_paul_00.jpg",
+            "les_paul_01.jpg",
+            "les_paul_02.jpg",
+            "les_paul_03.jpg",
+            "les_paul_04.jpg"
+        ],
+        "sold": false
+    }, {
+        "id": 1799766,
+        "name": "Producto Prueba 1",
+        "price": "1000",
+        "used": "true",
+        "userId": 2,
+        "quantity": "5",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "image": [
+            "default-image.png",
+            "default-image.png",
+            "default-image.png",
+            "default-image.png",
+            "default-image.png"
+        ],
+        "sold": false
+    }, {
+        "id": 1799767,
+        "name": "Producto Prueba 2",
+        "price": "2000",
+        "used": false,
+        "userId": 2,
+        "quantity": "15",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "image": [
+            "default-image.png",
+            "default-image.png",
+            "default-image.png",
+            "default-image.png",
+            "default-image.png"
+        ],
+        "sold": false
+    }, {
+        "id": 1799768,
+        "name": "Guitarra",
+        "price": "1500",
+        "used": "false",
+        "userId": 2,
+        "quantity": "7",
+        "description": "Guitarra criolla marca de Olla baratísima.",
+        "image": [
+            "default-image.png",
+            "default-image.png",
+            "default-image.png",
+            "default-image.png",
+            "default-image.png"
+        ],
+        "sold": false
+    }
+]

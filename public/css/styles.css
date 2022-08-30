@@ -249,6 +249,15 @@ section.cta-main{
     overflow: auto;
 }
 
+section.cta-error{
+    margin: 0.5rem 0;
+    width: 100%;
+    height: 30rem;
+    background-image: url("/img/broken-guitar.jpg");
+    background-size: cover;
+    overflow: auto;
+}
+
 section.cta-login{
     margin: 0.5rem 0;
     width: 100%;
@@ -257,7 +266,7 @@ section.cta-login{
     background-size: cover;
 }
 
-section.cta-main div{
+section.cta-main div, section.cta-error div{
     height: 15rem;
     width: 95%;
     margin: 7.5rem auto;

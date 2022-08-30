@@ -13,11 +13,11 @@
     <%- include('../partials/header')%>
 
     <main>
-        <h2>Todos los productos</h2>
-        <section class="carrousel">
-            <%for(p of products){%>
-                <%- include('../partials/article',{p})%>
-            <%}%>
+        <section class="cta-error">
+            <div>
+                <h1>Error: usuario o contraseña erróneos</h1>
+                <a class="link" href="/"><h2>Volver al menú principal</h2></a>
+            </div>
         </section>
     </main>
 

@@ -28,6 +28,8 @@ app.use('/products',productsRouter);
 
 app.use('/users',usersRouter);
 
+app.use((req,res,next)=>{res.status(404).render('main/error')})
+
 app.listen(app.get('port'), () => {
     console.log(`Servidor corriendo de manera satisfactoria en puerto ${app.get('port')}`)
 });
