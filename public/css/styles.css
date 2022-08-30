@@ -25,7 +25,7 @@ html{
     font-family:'Lato', sans-serif;
 }
 
-h4,h5,h6,footer li{
+h4,h5,h6,footer li,textarea,input{
     font-family: 'Roboto', sans-serif;
 }
 
@@ -49,12 +49,18 @@ h5,footer li,label,button{
     font-size: 1.8rem;
 }
 
-button,a{
+a{
     font-size: 1.5rem;
 }
 
 h6{
     font-size: 1rem;
+}
+
+button{
+    text-align: center;
+    background-color: #ffffff00;
+    border-width: 0px;
 }
 
 .price{
@@ -285,12 +291,16 @@ section.cta-login div{
     width: 90%;
 }
 
-input{
+input,textarea{
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 0.7rem;
     border: 1px solid var(--background);
     border-radius: 3px;
+}
+
+textarea{
+    height: 10rem;
 }
 
 label {
@@ -388,7 +398,7 @@ section.cta-main div h1{
     justify-content: space-between;
 }
 
-#product-info a{
+#product-info a, .line-arrange a{
     text-align: center;
     text-decoration: none;
     padding-top: 0.5rem;
@@ -601,14 +611,9 @@ i.footer-paragraph{
     font-size: 24px;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
 @media (max-width: 800px) {
-.row {
-    flex-direction: column-reverse;
-}
-.col-25 {
-    margin-bottom: 20px;
-}
+
+
 }
 
 @media(min-width:768px){
@@ -714,6 +719,10 @@ i.footer-paragraph{
     .notification{
         top: -0.5rem;
         left: 2.8rem;
+    }
+
+    .row {
+        flex-direction: column-reverse;
     }
 }
 

@@ -17,19 +17,19 @@
             <div class="container">
                 <form action="/users/register" method="post">
                     <h3>Formulario de Registro</h3>
-                    <input class="input-bar" name="name" placeholder="Nombre y Apellido" required><br>
+                    <input name="name" placeholder="Nombre y Apellido" required><br>
                     
-                    <input  class="input-bar" name="user-name" placeholder="Nombre de Usuario" required><br>
+                    <input name="user-name" placeholder="Nombre de Usuario" required><br>
                     
                     <label for>Fecha de nacimiento</label><br>
-                    <input class="input-bar" type="date" value="1900-01-01" required><br>
+                    <input type="date" value="1900-01-01" required><br>
 
-                    <input class="input-bar" type="text" name="address" placeholder="Domicilio" required><br>
+                    <input type="text" name="address" placeholder="Domicilio" required><br>
                     
                     <label>Foto de usuario</label><br>
                     <input type="file" name="avatar" accept=".jpg"><br>
-                    <input class="input-bar" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="La contraseña debe contener al menos 8 caracteres, al menos una mayúscula y al menos una minúscula" placeholder="Ingrese contraseña" required><br>
-                    <input class="input-bar" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="La contraseña debe contener al menos 8 caracteres, al menos una mayúscula y al menos una minúscula" placeholder="Confirme contraseña" required><br>
+                    <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="La contraseña debe contener al menos 8 caracteres, al menos una mayúscula y al menos una minúscula" placeholder="Ingrese contraseña" required><br>
+                    <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="La contraseña debe contener al menos 8 caracteres, al menos una mayúscula y al menos una minúscula" placeholder="Confirme contraseña" required><br>
                     <div class="line-arrange">
                         <button class="rnd-button med-button button-01" type="submit">Enviar</button>
                         <button class="rnd-button med-button button-02" type="reset">Reset</button>
