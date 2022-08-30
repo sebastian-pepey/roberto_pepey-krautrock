@@ -66,6 +66,7 @@ h6{
     height: 3rem;
     margin: 0.2rem;
     border-width: 0;
+    border-radius: 0.3rem;
 }
 
 .rnd-button{
@@ -107,6 +108,10 @@ h6{
     color: var(--background);
     border: solid 0.2rem #000;
 }
+
+.button-01:hover {
+    background-color: var(--enfasis);
+    }
 
 .btn-full{
     width: 99%;
@@ -271,17 +276,19 @@ section.cta-login div{
     width: 90%;
 }
 
-form{
-    width: 80%;
-}
-
-form input{
+input{
     width: 100%;
-    height: 3rem;
-    margin: 0.7rem 0;
+    padding: 0.5rem;
+    margin-bottom: 0.7rem;
+    border: 1px solid var(--background);
+    border-radius: 3px;
 }
 
-#checkbox{
+label {
+    display: block;
+}
+
+.checkbox{
     display: inline;
     width: 1.5rem;
     margin-right:1rem;
@@ -491,23 +498,6 @@ i.footer-paragraph{
     100%{transform: scale(1,1);}
 }
 
-.background-login{
-    background-image: url("/img/led_zeppelin.jpg");
-    background-size: cover;
-    width: 100%;
-    height: 55rem;
-    overflow: auto;
-    margin: 1rem 0;
-}
-
-.register-form{
-    background-color: var(--fondo);
-    padding: 4rem;
-    height: 50rem;
-    margin: 2.5rem 2.5rem;
-    width: 85%;
-}
-
 .big-pic{
     margin: 1rem 0;
     width: 100%;
@@ -516,7 +506,7 @@ i.footer-paragraph{
 .small-pic{
     width: 25%;
     height: 10rem;
-    object-fit: cover;
+    object-fit:contain;
 }
 
 #product-item{
@@ -537,7 +527,7 @@ i.footer-paragraph{
 }
 
 #product-title, #seller-name, #price{
-    margin: 0.5rem 0;
+    margin: 0;
 }
 
 #item-description{
@@ -549,6 +539,68 @@ i.footer-paragraph{
     margin: 1rem 0;
 }
 
+/* Product Cart */    
+    
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column {
+    display: flex;
+    display:column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col-20 {
+    flex: 20%;
+}
+
+
+.col-40 {
+    flex: 40%;
+}
+
+.col-50 {
+    flex: 50%;
+}
+
+.col-60 {
+    flex: 60%;
+}
+
+.col-20,
+.col-40,
+.col-50,
+.col-60 {
+  padding: 0 16px;
+}
+
+.container {
+    background-color: var(--claro);
+    padding: 5px 20px 15px 20px;
+    border: 1px solid var(--background);
+    border-radius: 3px;
+    margin: 1rem 0;
+}
+
+.icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+.row {
+    flex-direction: column-reverse;
+}
+.col-25 {
+    margin-bottom: 20px;
+}
+}
 
 @media(min-width:768px){
 
@@ -613,6 +665,7 @@ i.footer-paragraph{
 
     .register-form{
         width: min(80%,42rem);
+        margin: 0 auto;
     }
 
     #product-item{

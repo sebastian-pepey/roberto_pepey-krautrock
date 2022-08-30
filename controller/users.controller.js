@@ -1,3 +1,5 @@
+const fs=require('fs');
+
 const usersController={
 
     register: (req,res)=>{
@@ -7,9 +9,11 @@ const usersController={
     login: (req,res)=>{
         res.render('users/login');
     },
+    
+    save: (req,res)=>{
+        res.send(req.body);
 
-    registerSuccess: (req,res)=>{
-        res.render('users/register-success');
+        const users=JSON.parse(fs.readFileSync('data/usersDataBase.json',{encoding:'utf-8'}));
     }
 }
 

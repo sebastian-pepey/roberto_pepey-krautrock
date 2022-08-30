@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- head -->
+    <%- include('../partials/head')%>
+    
+<body>
+
+    <!-- nav -->
+    <%- include('../partials/nav')%>
+
+    <!-- header -->
+    <%- include('../partials/header')%>
+
+    <main>
+        <div id="product-item">
+            <div id="pictures">
+                <img class="big-pic" src="/img/<%=productToShow.image[0]%>" alt="">
+                <div>
+                    <img class="small-pic" src="/img/<%=productToShow.image[1]%>" alt="">
+                    <img class="small-pic" src="/img/<%=productToShow.image[2]%>" alt="">
+                    <img class="small-pic" src="/img/<%=productToShow.image[3]%>" alt="">
+                    <img class="small-pic" src="/img/<%=productToShow.image[4]%>" alt="">
+                </div>
+            </div>
+            <div id="product-info">
+                <h3 id="product-title"><%=productToShow.name%></h3>
+                <p id="seller-name">Vendedor</p>
+                <p id="seller-name"><%=userToShow.name%> - <%=userToShow.location%> - <%=userToShow.country%></p>
+                <!-- <p id="seller-name"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></p> -->
+                <p id="seller-name">Rating: <%=userToShow.rating%></p>
+                <h2 class="price">$<%=productToShow.price%></h2>
+                <a href="/products/<%=productToShow.id%>/cart" class="btn-full sqr-button lrg-button button-01">Agregar al carrito</a>
+                <div class="line-arrange">
+                    <a href="/products/<%=productToShow.id%>/edit" class="btn-half sqr-button button-02" >Modificar</a>
+                    <a href="/products/<%=productToShow.id%>/delete" class="btn-half sqr-button button-03">Eliminar</a>
+                </div>
+                <p id="item-description"><%=productToShow.description%></p>
+            </div>
+        </div>      
+    </main>
+    
+    <!-- footer -->
+    <%- include('../partials/footer')%>
+
+</body>
+</html>

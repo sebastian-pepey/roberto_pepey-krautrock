@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&family=Yellowtail&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    <script src="/js/script.js"></script>
-    <title>krautrock | registro</title>
-</head>
+
+    <!-- head -->
+    <%- include('../partials/head')%>
+    
 <body>
 
     <!-- nav -->
@@ -21,23 +12,27 @@
     <!-- header -->
     <%- include('../partials/header')%>
     
-    <main class="background-login">
-        <form class="register-form" action="/products/create" method="post">
-            <h3>Formulario de Creación de Producto</h3>
-            <input class="input-bar" name="name" placeholder="Nombre del producto" required><br>
-            
-            <input  class="input-bar" name="price" placeholder="Precio" required><br>
-            
-            <input  class="input-bar" name="description" placeholder="Descripción" required><br>
-
-            <label>Foto de usuario</label><br>
-            <input type="file" name="image" multiple accept=".jpg"><br>
-            
-            <div class="line-arrange">
-                <button class="rnd-button med-button button-01" type="submit">Enviar</button>
-                <button class="rnd-button med-button button-02" type="reset">Reset</button>
+    <main>
+        <div class="register-form">
+            <div class="container">
+                <form action="/products/create" method="post">
+                    <h3>Formulario de Creación de Producto</h3>
+                    <input class="input-bar" name="name" placeholder="Nombre del producto" required><br>
+                    
+                    <input  class="input-bar" name="price" placeholder="Precio" required><br>
+                    
+                    <input  class="input-bar" name="description" placeholder="Descripción" required><br>
+        
+                    <label>Foto de usuario</label><br>
+                    <input type="file" name="image" multiple accept=".jpg"><br>
+                    
+                    <div class="line-arrange">
+                        <button class="rnd-button med-button button-01" type="submit">Enviar</button>
+                        <button class="rnd-button med-button button-02" type="reset">Reset</button>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </main>
 
     <!-- footer -->

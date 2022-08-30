@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- head -->
+    <%- include('../partials/head')%>
+    
+<body>
+
+    <!-- nav -->
+    <%- include('../partials/nav')%>
+
+    <!-- header -->
+    <%- include('../partials/header')%>
+
+    <main>
+        <section class="main-inferior">
+            <section class="sales">
+                <h2>Todos los productos</h2>
+                <section class="carrousel">
+                    <%for(p of products){%>
+                        <%- include('../partials/article')%>
+                    <%}%>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <%- include('../partials/footer')%>
+
+</body>
+</html>

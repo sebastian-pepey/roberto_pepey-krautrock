@@ -1,13 +1,14 @@
+// ************ Require's ************
 const express=require('express');
+const router=express.Router();
 
-const usersRouter=express.Router();
-
+// ************ Controller Require ************
 const usersController=require('../controller/users.controller');
 
-usersRouter.get('/login',usersController.login);
+router.get('/login',usersController.login);
 
-usersRouter.get('/register',usersController.register);
+router.get('/register',usersController.register);
 
-usersRouter.post('/register',usersController.registerSuccess);
+router.post('/register',usersController.save)
 
-module.exports=usersRouter;
+module.exports=router;

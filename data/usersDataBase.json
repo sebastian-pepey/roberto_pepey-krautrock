@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Vintage Synths",
+        "email": "vintagesynths@vs.com",
+        "phone": 2224444,
+        "location": "Miami",
+        "country": "US",
+        "rating": 4
+    }, {
+        "id": 2,
+        "name": "Joe's Bazaar",
+        "email": "joes@bazaar.com",
+        "phone": 7655433,
+        "location": "London",
+        "country": "ENG",
+        "rating": 4.5
+    }, {
+        "id": 3,
+        "name": "Promusik",
+        "email": "promusikgmbh@orange.de",
+        "phone": 1115563,
+        "location": "Munich",
+        "country": "DE",
+        "rating": 4.6
+    }
+]

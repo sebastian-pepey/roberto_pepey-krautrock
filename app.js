@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+const mainRouter=require(path.join(__dirname,"/routes/main.routes"));
 const productsRouter=require(path.join(__dirname,"/routes/products.routes"));
 const usersRouter=require(path.join(__dirname,"/routes/users.routes"));
 
@@ -18,7 +19,9 @@ app.set('port',process.env.PORT || 3000);
 
 
 //RUTAS
-app.use('/products',productsRouter)
+app.use('/',mainRouter);
+
+app.use('/products',productsRouter);
 
 app.use('/users',usersRouter);
 

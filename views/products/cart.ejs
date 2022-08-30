@@ -1,32 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&family=Yellowtail&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    <script src="/js/script.js"></script>
-    <title>krautrock | carrito</title>
-</head>
-<body>
-    
-    <!-- nav -->
-    <%- include('../partials/nav')%>
 
-    <!-- header -->
-    <%- include('../partials/header')%>
+    <!-- head -->
+    <%- include('../partials/head')%>
 
-    <main>
+    <body>
         
-    </main>
+        <!-- nav -->
+        <%- include('../partials/nav')%>
 
-    <!-- footer -->
-    <%- include('../partials/footer')%>
+        <!-- header -->
+        <%- include('../partials/header')%>
 
-</body>
+        <main>
+            <h2>Agregado al carrito!</h2>
+            <p id="cart-cta">SEGUIR COMPRANDO</p>         
+
+            <div class="row">
+                <div class="col-60">
+                    <div class="container">
+                        <form action="/" method="post">
+                            <div class="row">
+                                <div class="col-50">
+                                    <h3>Dirección de Facturación</h3>
+                                    <label for="fname"><i class="fa-solid fa-user"></i> Nombre completo</label>
+                                    <input type="text" id="fname" name="firstname" placeholder="Juan Perez">
+                                    <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+                                    <input type="text" id="email" name="email" placeholder="juan@ejemplo.com.ar">
+                                    <label for="adr"><i class="fa-solid fa-map-location-dot"></i> Dirección</label>
+                                    <input type="text" id="adr" name="address" placeholder="Calle Falsa 123">
+                                    <label for="city"><i class="fa-solid fa-earth-americas"></i></i> Ciudad</label>
+                                    <input type="text" id="city" name="city" placeholder="Ciudad Antónoma de Buenos Aires">
+                                    <div class="row">
+                                        <div class="col-40">
+                                            <label for="state">Provincia</label>
+                                            <input type="text" id="state" name="state" placeholder="BA">
+                                        </div>
+                                        <div class="col-40">
+                                            <label for="zip">Zip</label>
+                                            <input type="text" id="zip" name="zip" placeholder="C1000">
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-50">
+                                    <h3>Método de pago</h3>
+                                    <label for="fname">Tarjetas aceptadas</label>
+                                        <div class="icon-container">
+                                            <i class="fa-brands fa-cc-visa" style="color:navy;"></i>
+                                            <i class="fa-brands fa-cc-amex" style="color:blue;"></i>
+                                            <i class="fa-brands fa-cc-mastercard" style="color:red;"></i>
+                                            <i class="fa-brands fa-cc-discover" style="color:orange;"></i>
+                                        </div>
+                                    <label for="cname">Nombre en la tarjeta</label>
+                                    <input type="text" id="cname" name="cardname" placeholder="Juan P Perez">
+                                    <label for="ccnum">Número de tarjeta de crédito</label>
+                                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                    <label for="expmonth">Mes expiración</label>
+                                    <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                        
+                                    <div class="row">
+                                        <div class="col-40">
+                                            <label for="expyear">Año expiración</label>
+                                            <input type="text" id="expyear" name="expyear" placeholder="2025">
+                                        </div>
+                                        <div class="col-40">
+                                            <label for="cvv">CVV</label>
+                                            <input type="password" id="cvv" name="cvv" placeholder="***">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <label>
+                                <input class=checkbox type="checkbox" checked="checked" name="sameadr"> Dirección de envío igual a la de facturación
+                            </label>
+                            <input type="submit" value="Continue to checkout" class="sqr-button button-01">
+                        </form>
+                    </div>
+                </div>
+            
+                <div class="col-20">
+                    <div class="container column">
+                        <div>
+                            <h3><%=productToShow.name%></h3>
+                            <h2 class="price">$<%=productToShow.price%></h2>
+                            <p>Vendedor: <%=userToShow.name%></p>
+                        </div>
+                        <img class="small-pic" src="/img/<%=productToShow.image[0]%>" alt="">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- footer -->
+        <%- include('../partials/footer')%>
+    </body>
 </html>

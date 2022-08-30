@@ -1,17 +1,17 @@
 const express=require('express');
 
-const productsRouter=express.Router();
+const router=express.Router();
 
 const productsController=require('../controller/products.controller');
 
-productsRouter.get('/',productsController.index);
+router.get('/',productsController.products);
 
-productsRouter.get('/:id',productsController.product);
+router.get('/create',productsController.showForm);
 
-productsRouter.get('/cart',productsController.cart);
+router.post('/create',productsController.createProduct)
 
-productsRouter.get('/create',productsController.createProduct);
+router.get('/:id/cart',productsController.cart);
 
-productsRouter.post('/create',productsController.createNewProduct)
+router.get('/:id',productsController.detail);
 
-module.exports=productsRouter;
+module.exports=router;

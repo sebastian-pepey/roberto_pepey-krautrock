@@ -1,31 +1,49 @@
 const fs=require('fs');
 
-const products=JSON.parse(fs.readFileSync('data/productsDataBase.json',{encoding:'utf-8'}));
-
 const productsController={
 
-    index: (req,res)=>{
+    products: (req,res)=>{
 
-        res.render('products/index',{products});
+        const products=JSON.parse(fs.readFileSync('data/productsDataBase.json',{encoding:'utf-8'}));
+
+        res.render('products/products',{products});
 
     },
 
-    product: (req,res)=>{
+    detail: (req,res)=>{
 
-        const productToShow=products.find(e=>e.id===parseInt(req.params.id))
+        const products=JSON.parse(fs.readFileSync('data/productsDataBase.json',{encoding:'utf-8'}));
 
-        res.render('products/product',{productToShow})
+        const users=JSON.parse(fs.readFileSync('data/usersDataBase.json',{encoding:'utf-8'}));
+
+        const productToShow=products.find(e=>e.id===parseInt(req.params.id));
+
+        const userToShow=users.find(e=>e.id===productToShow.userId);
+
+        res.render('products/detail',{productToShow,userToShow})
     },
 
     cart: (req,res)=>{
-        res.render('products/cart');
+
+        const products=JSON.parse(fs.readFileSync('data/productsDataBase.json',{encoding:'utf-8'}));
+
+        const users=JSON.parse(fs.readFileSync('data/usersDataBase.json',{encoding:'utf-8'}));
+
+        const productToShow=products.find(e=>e.id===parseInt(req.params.id));
+
+        const userToShow=users.find(e=>e.id===productToShow.userId);
+
+        res.render('products/cart',{productToShow,userToShow});
     },
 
-    createProduct: (req,res)=>{
+    showForm: (req,res)=>{
         res.render('products/create-product');
     },
 
-    createNewProduct: (req,res)=>{
+    createProduct: (req,res)=>{
+
+        const products=JSON.parse(fs.readFileSync('data/productsDataBase.json',{encoding:'utf-8'}));
+
         products.push(
             {
                 id:1,
@@ -38,7 +56,7 @@ const productsController={
 
         fs.writeFileSync('./data/productsDataBase.json',JSON.stringify(products));
 
-        res.redirect('/');
+        res.redirect('/products');
     },
 }
 
