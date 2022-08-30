@@ -6,6 +6,7 @@
     --reserva: #e0dede90;
     --correcto: #2E5902;
     --boton: #193C40;
+    --enfasis-02:#0a1618;
     --background:#3A3838;
     --texto: var(--texto);
     --claro:#FFFFFF;
@@ -109,9 +110,17 @@ h6{
     border: solid 0.2rem #000;
 }
 
-.button-01:hover {
-    background-color: var(--enfasis);
-    }
+.button-01:hover{
+    background-color: var(--header);
+}
+
+.button-02:hover{
+    background-color: var(--enfasis-02);
+}
+
+.button-03:hover{
+    background-color: var(--reserva);
+}
 
 .btn-full{
     width: 99%;
@@ -379,7 +388,7 @@ section.cta-main div h1{
     justify-content: space-between;
 }
 
-.line-arrange a{
+#product-info a{
     text-align: center;
     text-decoration: none;
     padding-top: 0.5rem;
