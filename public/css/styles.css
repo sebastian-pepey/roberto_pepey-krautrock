@@ -45,6 +45,10 @@ h4,p,li{
     font-size: 1.9rem;
 }
 
+p{
+    margin-bottom:0.5rem;
+}
+
 h5,footer li,label,button{
     font-size: 1.8rem;
 }
@@ -58,9 +62,17 @@ h6{
 }
 
 button{
+    display: inline;
     text-align: center;
     background-color: #ffffff00;
     border-width: 0px;
+    margin: 0 auto;
+}
+
+form.btn-half button{
+    width: 100%;
+    margin: 0.3rem;
+    font-size: 1.5rem;
 }
 
 .price{
@@ -291,7 +303,7 @@ section.cta-login div{
     width: 90%;
 }
 
-input,textarea{
+input,textarea, select{
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 0.7rem;
@@ -357,11 +369,13 @@ section.cta-main div h1{
 .carrousel{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .carrousel a{
     margin: 1rem;
     padding: 0;
+    width: 80%;
 }
 
 .carrousel a article{
@@ -373,8 +387,8 @@ section.cta-main div h1{
 }
 
 .carrousel a article img{
-    width: 90%;
-    margin: 1rem 5% 0.5rem;
+    width: 70%;
+    margin: 1rem 15% 0.5rem;
 }
 
 .sales{
@@ -545,7 +559,7 @@ i.footer-paragraph{
     flex-direction: row;
 }
 
-#product-title, #seller-name, #price{
+#product-title, #price{
     margin: 0;
 }
 
@@ -563,8 +577,8 @@ i.footer-paragraph{
 .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     flex-direction: column-reverse;
+    margin: 0 -16px;
 }
 
 .column {
@@ -631,7 +645,7 @@ i.footer-paragraph{
 
     .carrousel{
         width: 100%;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 
     .condition{
@@ -697,6 +711,7 @@ i.footer-paragraph{
 
     .main-inferior{
         flex-direction: row;
+        align-items: flex-start;
     }
 
     .ranking-list{
@@ -720,6 +735,7 @@ i.footer-paragraph{
     .row {
         flex-direction: row;
     }
+
 }
 
 @media(min-width:1024px){

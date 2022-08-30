@@ -25,8 +25,14 @@
                     <input name="quantity" type="number" placeholder="Cantidad" required>
                     
                     <textarea name="description" placeholder="Descripción" required></textarea>
-                                        
-                    <label>Foto de usuario</label><br>
+                    
+                    <label for="condition">Condición</label>
+                    <select name="used" id="condition">
+                        <option value=true>Usado</option>
+                        <option value=false>Nuevo</option>
+                    </select>
+
+                    <label>Foto de usuario</label>
                     <input type="file" name="image" multiple accept=".jpg">
                     
                     <div class="line-arrange">

@@ -26,6 +26,14 @@
                     
                     <textarea name="description" placeholder="Descripción" required><%=productToShow.description%></textarea>
 
+                    <% var selected=productToShow.used==true?['selected','']:['','selected']%>
+
+                    <label for="condition">Condición</label>
+                    <select name="used" id="condition">
+                        <option value=true <%=selected[0]%>>Usado</option>
+                        <option value=false <%=selected[1]%>>Nuevo</option>
+                    </select>
+
                     <div class="line-arrange">
                         <button class="sqr-button med-button button-01" type="submit">Enviar</button>
                         <a href="/" class="sqr-button med-button button-02" type="reset">Cancelar</a>

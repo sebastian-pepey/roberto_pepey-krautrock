@@ -3,6 +3,7 @@
     <div class="main-article">
         <h4 class="description"><%=p.name%></h4>
         <p class="price">$<%=p.price%></p>
-        <p class="condition">Segunda Mano - Impecable</p>
+        <%let estado=(p.used===true)?"Usado":"Nuevo"%>
+        <p class="condition"><%=estado%></p>
     </div>
 </article></a>

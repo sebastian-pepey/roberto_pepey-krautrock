@@ -78,14 +78,16 @@ const productsController={
     editProduct: (req,res)=>{
 
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        
 		const productToEdit=products.find(e=>e.id===parseInt(req.params.id))
 		
 		let indexProduct=products.indexOf(productToEdit);
-		
+		console.log(req.body.used)
 		products[indexProduct].name=req.body.name;
 		products[indexProduct].price=req.body.price;
 		products[indexProduct].discount=req.body.discount;
 		products[indexProduct].category=req.body.category;
+        products[indexProduct].used=req.body.used==='true';
 		products[indexProduct].description=req.body.description;
 		
 		fs.writeFileSync(productsFilePath,JSON.stringify(products));
