@@ -564,6 +564,7 @@ i.footer-paragraph{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    flex-direction: column-reverse;
 }
 
 .column {
@@ -609,11 +610,6 @@ i.footer-paragraph{
     margin-bottom: 20px;
     padding: 7px 0;
     font-size: 24px;
-}
-
-@media (max-width: 800px) {
-
-
 }
 
 @media(min-width:768px){
@@ -722,7 +718,7 @@ i.footer-paragraph{
     }
 
     .row {
-        flex-direction: column-reverse;
+        flex-direction: row;
     }
 }
 
