@@ -15,27 +15,42 @@
     <main>
         <div class="register-form">
             <div class="container">
-                <form action="/products/<%=productToShow.id%>/edit?_method=PUT" method="post">
+                <form action="/products/<%=productToShow.id%>/edit?_method=PUT" method="post" enctype="multipart/form-data">
                     <h3>Formulario de Edición de Producto</h3>
+
                     
                     <input name="name" value="<%=productToShow.name%>" required>
                     
-                    <input name="price" value="<%=productToShow.price%>" placeholder="Precio" required>
+                    <input name="orig_price" value="<%=productToShow.origPrice%>" required>
 
-                    <input name="quantity" value="<%=productToShow.quantity%>" type="number" placeholder="Cantidad" required>
+                    <input name="quantity" type="number" value="<%=productToShow.quantity%>" required>
                     
                     <textarea name="description" placeholder="Descripción" required><%=productToShow.description%></textarea>
 
+                    <div class="line-arrange">
+                        <label><input type="checkbox" name="discount" class="checkbox" <%=productToShow.discount?'checked':''%>>Este producto tiene un descuento</label>
+                        <input class="col-30" name="discount_amount" type="number" value="<%=productToShow.quantity%>" required>
+                    </div>
+
+                    <div class="background-emphasis">
+                        <p>Modificar condiciones de envío / cuotas</p>
+                        <label><input type="checkbox" name="free_shipment" class="checkbox" <%=productToShow.freeShipment?'checked':''%>>Envíos gratis (costo $25+imp.)</label>
+                        <label><input type="checkbox" name="payments" class="checkbox" <%=productToShow.payments?'checked':''%>>Cuotas sin interés (costo $30+imp.)</label>
+                    </div>
+
                     <% var selected=productToShow.used==true?['selected','']:['','selected']%>
 
-                    <label for="condition">Condición</label>
-                    <select name="used" id="condition">
+                    <label for="condition_e">Condición</label>
+                    <select name="used" id="condition_e">
                         <option value=true <%=selected[0]%>>Usado</option>
                         <option value=false <%=selected[1]%>>Nuevo</option>
                     </select>
 
+                    <label>Foto de usuario</label>
+                    <input type="file" name="productImage" multiple accept=".jpg">
+
                     <div class="line-arrange">
-                        <button class="sqr-button med-button button-01" type="submit">Enviar</button>
+                        <button class="sqr-button med-button button-01" type="submit">Modificar</button>
                         <a href="/" class="sqr-button med-button button-02" type="reset">Cancelar</a>
                     </div>
                 </form>

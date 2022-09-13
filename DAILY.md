@@ -20,3 +20,8 @@ Proyecto Final Full Stack Program Digital House
 
 - dar funcionalidad a barra de búsqueda
 - integrar a los usuarios: se encuentra creada una forma de persistencia pero no se ha avanzado más allá. Validar que las dos contraseñas coinciden.
+
+
+- Agregar posibilidad de descuentos
+- Agregar categorías
+- Corregir fotografías

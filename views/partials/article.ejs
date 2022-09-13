@@ -1,9 +1,21 @@
 <a class="link" href="/products/<%=p.id%>"><article>
-    <img src="/img/<%=p.image[0]%>" alt="" class="product_img">
+    <img src="/img/<%=p.image[0].filename%>" alt="" class="product_img">
     <div class="main-article">
-        <h4 class="description"><%=p.name%></h4>
-        <p class="price">$<%=p.price%></p>
+        <h3 class="description"><%=p.name%></h3>
+        <%if(p.discount){%>
+            <div class="horizontal">
+                <p class="line-through">$<%=p.origPrice%></p>
+                <p class="text-emphasis-03"><%=p.discountAmount%>%</p>
+            </div>
+        <%}%>
+        <p class="text-emphasis-01">$<%=p.origPrice*(1-p.discountAmount/100)%></p>
         <%let estado=(p.used===true)?"Usado":"Nuevo"%>
         <p class="condition"><%=estado%></p>
+        <%if(p.payments){%>
+            <h5>Cuotas sin Interés</h5>
+        <%}%>
+        <%if(p.freeShipment){%>
+            <p class="text-emphasis-02">Envíos Gratis</p>
+        <%}%>  
     </div>
 </article></a>

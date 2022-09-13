@@ -3,7 +3,7 @@ var menuMostrado=0;
         function muestraMenu(){
             if(menuMostrado===0){
                 cruz();
-                document.getElementById('menu').style.height='20rem';
+                document.getElementById('menu').style.height='16rem';
                 menuMostrado=1;
             }
             else{

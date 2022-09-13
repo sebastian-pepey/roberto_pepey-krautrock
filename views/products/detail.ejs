@@ -14,16 +14,15 @@
 
     <main>
         <div id="product-item">
-            <div id="pictures">
-                <img class="big-pic" src="/img/<%=productToShow.image[0]%>" alt="">
+            <div id="pictures" class="border">
+                <img class="big-pic" src="/img/<%=productToShow.image[0].filename%>" alt="">
                 <div>
-                    <img class="small-pic" src="/img/<%=productToShow.image[1]%>" alt="">
-                    <img class="small-pic" src="/img/<%=productToShow.image[2]%>" alt="">
-                    <img class="small-pic" src="/img/<%=productToShow.image[3]%>" alt="">
-                    <img class="small-pic" src="/img/<%=productToShow.image[4]%>" alt="">
+                    <%for(let i=1;i<productToShow.image.length;i++){%>
+                        <img class="small-pic" src="/img/<%=productToShow.image[i].filename%>" alt="">   
+                    <%}%>
                 </div>
             </div>
-            <div id="product-info">
+            <div id="product-info" class="border">
                 <h2 id="product-title"><%=productToShow.name%></h2>
                 <h4>Vendedor</h4>
                 <p><%=userToShow.name%> - <%=userToShow.location%> - <%=userToShow.country%></p>

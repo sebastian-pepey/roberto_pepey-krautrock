@@ -15,17 +15,28 @@
     <main>
         <div class="register-form">
             <div class="container">
-                <form action="/products/create" method="post">
+                <form action="/products/create" method="post" enctype="multipart/form-data">
                     <h3>Formulario de Creación de Producto</h3>
 
                     <input name="name" placeholder="Nombre del producto" required>
                     
-                    <input name="price" placeholder="Precio" required>
+                    <input name="orig_price" placeholder="Precio" required>
 
-                    <input name="quantity" type="number" placeholder="Cantidad" required>
+                    <input name="quantity" type="number" placeholder="Cantidad en stock" required>
                     
                     <textarea name="description" placeholder="Descripción" required></textarea>
-                    
+
+                    <div class="line-arrange">
+                        <label><input type="checkbox" name="discount" class="checkbox">Este producto tiene un descuento</label>
+                        <input class="col-30" name="discount_amount" type="number" placeholder="Porcentaje de Descuento" required>
+                    </div>
+
+                    <div class="background-emphasis">
+                        <p>Con Krautrock Pay podes ofrecer</p>
+                        <label><input type="checkbox" name="free-shipment" class="checkbox">Envíos gratis (costo $25+imp.)</label>
+                        <label><input type="checkbox" name="payments" class="checkbox">Cuotas sin interés (costo $30+imp.)</label>
+                    </div>
+
                     <label for="condition">Condición</label>
                     <select name="used" id="condition">
                         <option value=true>Usado</option>
@@ -33,11 +44,11 @@
                     </select>
 
                     <label>Foto de usuario</label>
-                    <input type="file" name="image" multiple accept=".jpg">
+                    <input type="file" name="productImage" multiple accept=".jpg">
                     
                     <div class="line-arrange">
-                        <button class="sqr-button med-button button-01" type="submit">Enviar</button>
-                        <button class="sqr-button med-button button-02" type="reset">Reset</button>
+                        <button class="sqr-button med-button button-01" type="submit">Publicar</button>
+                        <button class="sqr-button med-button button-02" type="reset">Borrar campos</button>
                     </div>
                 </form>
             </div>

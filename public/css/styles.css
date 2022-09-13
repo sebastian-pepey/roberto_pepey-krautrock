@@ -10,7 +10,9 @@
     --background:#3A3838;
     --texto: var(--texto);
     --claro:#FFFFFF;
-    --transparente:#FFFFFF80
+    --transparente:#FFFFFF80;
+    --claro-02:#d1d1d19a;
+    --claro-02-activa:#8d8d8d9a;
 }
 
 *{
@@ -61,6 +63,43 @@ h6{
     font-size: 1rem;
 }
 
+.line-through{
+    text-decoration:line-through;
+    margin-right:1rem;
+}
+
+.text-emphasis-01{
+    color: var(--enfasis);
+    font-weight: bold;
+}
+
+.text-emphasis-02{
+    color: var(--correcto);
+    font-weight: bold;
+}
+
+.text-emphasis-03{
+    color: var(--enfasis-02);
+    font-weight: bold;
+}
+
+::-webkit-scrollbar {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 0.4rem solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 0.7rem;
+  background-color: var(--claro-02);
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--claro-02-activa);
+  }
+
 button{
     display: inline;
     text-align: center;
@@ -73,10 +112,6 @@ form.btn-half button{
     width: 100%;
     margin: 0.3rem;
     font-size: 1.5rem;
-}
-
-.price{
-    color: var(--enfasis);
 }
 
 /* Definición de Botones */
@@ -183,6 +218,22 @@ nav a h3{
     height: 0;
     transition: all 700ms;
     margin: 0 0.5rem 0;
+}
+
+
+.horizontal{
+    display: flex;
+}
+
+#inf-menu{
+    border-top: 0.1rem solid var(--background);
+    border-bottom: 0.1rem solid var(--background);
+    margin: 1rem 0;
+    overflow: auto;
+}
+
+#inf-menu p{
+    margin: 1rem;
 }
 
 .cart{
@@ -345,6 +396,12 @@ section.cta-main div h1{
     margin-bottom: 1rem;
 }
 
+.background-emphasis{
+    background-color: var(--claro-02);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
 .search-bar{
     margin: 1rem;
     background-color: var(--claro);
@@ -389,10 +446,12 @@ section.cta-main div h1{
 
 .carrousel a article{
     background-color: var(--claro);
+    border-radius: 0.5rem;
+    border:0.1rem solid var(--background);
 }
 
 .carrousel a article:hover{
-    box-shadow: 0.5rem 0.5rem 3rem var(--background);
+    box-shadow: 0rem 0rem 1.5rem var(--background);
 }
 
 .carrousel a article img{
@@ -556,6 +615,12 @@ i.footer-paragraph{
     flex-direction: column;
 }
 
+.border{
+    border-radius: 0.5rem;
+    border:0.1rem solid #000;
+    padding: 2rem;
+}
+
 #product-item div{
     margin: 0 1rem;
     display: flex;
@@ -601,6 +666,9 @@ i.footer-paragraph{
     flex: 20%;
 }
 
+.col-30 {
+    width: 30%;
+}
 
 .col-40 {
     flex: 40%;
@@ -623,9 +691,9 @@ i.footer-paragraph{
 
 .container {
     background-color: var(--claro);
-    padding: 5px 20px 15px 20px;
-    border: 1px solid var(--background);
-    border-radius: 3px;
+    padding: 0.5rem 2rem 1.5rem 2rem;
+    border: 0.1rem solid var(--background);
+    border-radius: 0.5rem;
     margin: 1rem 0;
 }
 
@@ -659,7 +727,6 @@ i.footer-paragraph{
 
     .condition{
         display: block;
-        height: 5.5rem;
     }
 
     .logo{
