@@ -12,6 +12,8 @@
         <!-- header -->
         <%- include('../partials/header')%>
 
+        <%let finalPrice=Math.ceil(productToShow.origPrice*(1-productToShow.discountAmount/100))%>
+
         <main>
             <h2>Agregado al carrito!</h2>
             <p>SEGUIR COMPRANDO</p>         
@@ -83,10 +85,10 @@
                     <div class="container column">
                         <div>
                             <h3><%=productToShow.name%></h3>
-                            <h2 class="price">$<%=productToShow.price%></h2>
+                            <h2 class="price">$<%=finalPrice%></h2>
                             <p>Vendedor: <%=userToShow.name%></p>
                         </div>
-                        <img class="small-pic" src="/img/<%=productToShow.image[0]%>" alt="">
+                        <img class="small-pic" src="/img/<%=productToShow.image[0].filename%>" alt="">
                     </div>
                 </div>
             </div>

@@ -115,7 +115,6 @@ const productsController = {
 
         if(req.files.length!==0){
             deleteFiles(products[indexProduct].image,'default-image.png','./../public/img/');
-
             products[indexProduct].image=req.files;
         }
 

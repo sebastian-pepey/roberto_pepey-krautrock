@@ -12,11 +12,13 @@
     <!-- header -->
     <%- include('../partials/header')%>
 
+    <%let finalPrice=Math.ceil(productToShow.origPrice*(1-productToShow.discountAmount/100))%>
+
     <main>
         <div id="product-item">
             <div id="pictures" class="border">
                 <img class="big-pic" src="/img/<%=productToShow.image[0].filename%>" alt="">
-                <div>
+                <div class="horizontal-div">
                     <%for(let i=1;i<productToShow.image.length;i++){%>
                         <img class="small-pic" src="/img/<%=productToShow.image[i].filename%>" alt="">   
                     <%}%>
@@ -24,17 +26,36 @@
             </div>
             <div id="product-info" class="border">
                 <h2 id="product-title"><%=productToShow.name%></h2>
-                <h4>Vendedor</h4>
-                <p><%=userToShow.name%> - <%=userToShow.location%> - <%=userToShow.country%></p>
-                <!-- <p id="seller-name"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></p> -->
-                
-                <h4>Rating</h4><p><%=userToShow.rating%></p>
+                <div class="background-emphasis">
+                    <h4>Vendedor</h4>
+                    <p><%=userToShow.name%> - <%=userToShow.location%> - <%=userToShow.country%></p>
+                    <!-- <p id="seller-name"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></p> -->
+                    
+                    <h4>Rating</h4><p><%=userToShow.rating%></p>
+                </div>
+                                
+                <%if(productToShow.discount){%>
+                    <div class="horizontal">
+                        <p class="line-through">$<%=productToShow.origPrice%></p>
+                        <p class="text-emphasis-03"><%=productToShow.discountAmount%>% OFF</p>
+                    </div>
+                <%}%>
+        
                 <h4>Condición</h4>
                 <%let estado=(productToShow.used===true)?"Usado":"Nuevo"%>
-                <p><%=estado%></p>
-                <h2 class="price">$<%=productToShow.price%></h2>
-                <a href="/products/<%=productToShow.id%>/cart" class="btn-full sqr-button lrg-button button-01">Agregar al carrito</a>
-                <div class="line-arrange">
+                <p class="condition"><%=estado%></p>
+                <%if(productToShow.payments){%>
+                    <h5>Cuotas sin Interés</h5>
+                <%}%>
+                <%if(productToShow.freeShipment){%>
+                    <p class="text-emphasis-02">Envíos Gratis</p>
+                <%}%>
+
+                <h2 class="text-emphasis-01">$<%=finalPrice%></h2>
+                
+                <a href="/products/<%=productToShow.id%>/cart" class="btn-full sqr-button button-01">Agregar al carrito</a>
+                
+                <div class="line-arrange horizontal-div">
                     <a href="/products/<%=productToShow.id%>/edit" class="btn-half sqr-button button-02">Modificar</a>
                     <form class="btn-half sqr-button button-03" action="/products/<%=productToShow.id%>/delete/?_method=DELETE" method="POST">
                         <button type="submit">Eliminar</button>

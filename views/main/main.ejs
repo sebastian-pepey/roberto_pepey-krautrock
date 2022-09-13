@@ -26,8 +26,9 @@
             <section class="sales">
                 <h2>Ofertas por tiempo limitado</h2>
                 <section class="carrousel">
-                    <%for(p of products){%>
-                        <%- include('../partials/article')%>
+                    <%const saleProducts=products.filter(e=>e.discount===true)%>
+                    <%for(p of saleProducts){%>
+                        <%- include('../products/article',{p})%>
                     <%}%>
                 </section>
             </section>

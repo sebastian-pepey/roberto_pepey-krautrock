@@ -48,7 +48,7 @@ h4,p,li{
 }
 
 p{
-    margin-bottom:0.5rem;
+    margin:0 1rem 0.5rem 0;
 }
 
 h5,footer li,label,button{
@@ -176,12 +176,15 @@ form.btn-half button{
 }
 
 .btn-full{
+    display: block;
     width: 99%;
 }
 
 .btn-half{
     width: 50%;
 }
+
+
 /*------------------------------------------------------*/
 nav{
     display: flex;
@@ -223,6 +226,7 @@ nav a h3{
 
 .horizontal{
     display: flex;
+    justify-content: flex-start;
 }
 
 #inf-menu{
@@ -448,10 +452,20 @@ section.cta-main div h1{
     background-color: var(--claro);
     border-radius: 0.5rem;
     border:0.1rem solid var(--background);
+    transition: all 450ms;
 }
 
 .carrousel a article:hover{
     box-shadow: 0rem 0rem 1.5rem var(--background);
+}
+
+.carrousel a article .inf-hidden{
+    display: none;
+    transition: all 450ms;
+}
+
+.carrousel a article:hover .inf-hidden{
+    display: block;
 }
 
 .carrousel a article img{
@@ -617,24 +631,22 @@ i.footer-paragraph{
 
 .border{
     border-radius: 0.5rem;
-    border:0.1rem solid #000;
+    border:0.1rem solid var(--background);
     padding: 2rem;
 }
 
-#product-item div{
-    margin: 0 1rem;
+div.horizontal-div{
     display: flex;
-    flex-direction: column;
-}
-
-#product-item div div{
     margin: 0;
-    display: flex;
     flex-direction: row;
 }
 
-#product-title, #price{
-    margin: 0;
+#product-title{
+    box-shadow: 0rem 0.25rem 0.5rem var(--background);
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: var(--fondo);
+
 }
 
 #item-description{
@@ -773,16 +785,18 @@ i.footer-paragraph{
         justify-content: center;
     }
 
-    #product-item div{
-        justify-content: center;
-    }
-
     #pictures{
         width: 35%;
+        margin: 1.5rem;
+        background-color: var(--claro);
+        box-shadow: 0rem 0rem 1.5rem var(--claro-02);
     }
 
     #product-info{
-        width: 25%;
+        width: 35%;
+        margin: 1.5rem;
+        background-color: var(--claro);
+        box-shadow: 0rem 0rem 1.5rem var(--claro-02);
     }
 
     .main-inferior{
