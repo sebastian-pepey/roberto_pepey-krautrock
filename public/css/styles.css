@@ -452,7 +452,7 @@ section.cta-main div h1{
     background-color: var(--claro);
     border-radius: 0.5rem;
     border:0.1rem solid var(--background);
-    transition: all 450ms;
+    transition: all 200ms;
 }
 
 .carrousel a article:hover{
@@ -460,12 +460,13 @@ section.cta-main div h1{
 }
 
 .carrousel a article .inf-hidden{
-    display: none;
-    transition: all 450ms;
+    height: 0;
+    overflow: hidden;
+    transition: all 200ms;
 }
 
 .carrousel a article:hover .inf-hidden{
-    display: block;
+    height: 2rem;
 }
 
 .carrousel a article img{
@@ -715,6 +716,18 @@ div.horizontal-div{
     font-size: 24px;
 }
 
+#pictures{
+    margin: 1.5rem;
+    background-color: var(--claro);
+    box-shadow: 0rem 0rem 1.5rem var(--claro-02);
+}
+
+#product-info{
+    margin: 1.5rem;
+    background-color: var(--claro);
+    box-shadow: 0rem 0rem 1.5rem var(--claro-02);
+}
+
 @media(min-width:768px){
 
     header a h1{
@@ -785,20 +798,6 @@ div.horizontal-div{
         justify-content: center;
     }
 
-    #pictures{
-        width: 35%;
-        margin: 1.5rem;
-        background-color: var(--claro);
-        box-shadow: 0rem 0rem 1.5rem var(--claro-02);
-    }
-
-    #product-info{
-        width: 35%;
-        margin: 1.5rem;
-        background-color: var(--claro);
-        box-shadow: 0rem 0rem 1.5rem var(--claro-02);
-    }
-
     .main-inferior{
         flex-direction: row;
         align-items: flex-start;
@@ -826,6 +825,13 @@ div.horizontal-div{
         flex-direction: row;
     }
 
+    #pictures{
+        width: 35%;
+    }
+    
+    #product-info{
+        width: 35%;
+    }
 }
 
 @media(min-width:1024px){
