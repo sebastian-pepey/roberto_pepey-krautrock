@@ -7,7 +7,7 @@
     <body>
         
         <!-- nav -->
-        <%- include('../partials/nav')%>
+        <%- include('../partials/nav',{user})%>
 
         <!-- header -->
         <%- include('../partials/header')%>
@@ -88,7 +88,7 @@
                             <h2 class="price">$<%=finalPrice%></h2>
                             <p>Vendedor: <%=userToShow.name%></p>
                         </div>
-                        <img class="small-pic" src="/img/<%=productToShow.image[0].filename%>" alt="">
+                        <img class="small-pic" src="/img/products/<%=productToShow.image[0].filename%>" alt="">
                     </div>
                 </div>
             </div>

@@ -61,3 +61,19 @@ Proyecto Final Full Stack Program Digital House
 - Falta agregar categorías. Se piensa en implementar middlewares.
 - Agregar límites para mostrar imágenes. Mejorar visualización en detalles de producto.
 - El footer está flotante.
+
+## daily 04/10/2022
+
+### tareas efectuadas:
+
+-  Agregado rutas usuarios
+-  Agregado CRUD usuarios
+
+### impedimentos:
+
+- Simplificar reglas de CSS. Establecer patrones de diseño si es posible-
+- Mejora generalizada de la disposición de elementos dentro de HTML
+
+### tareas a llevar a cabo:
+
+- 

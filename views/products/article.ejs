@@ -1,7 +1,7 @@
 <%let finalPrice=Math.ceil(p.origPrice*(1-p.discountAmount/100))%>
 
 <a class="link" href="/products/<%=p.id%>"><article>
-    <img src="/img/<%=p.image[0].filename%>" alt="" class="product_img">
+    <img src="/img/products/<%=p.image[0].filename%>" alt="" class="product_img">
     <div class="main-article">
         <h3 class="description"><%=p.name%></h3>
         <%if(p.discount){%>

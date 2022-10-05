@@ -7,7 +7,7 @@
 <body>
     
     <!-- nav -->
-    <%- include('../partials/nav')%>
+    <%- include('../partials/nav',{user})%>
 
     <!-- header -->
     <%- include('../partials/header')%>
@@ -18,42 +18,73 @@
                 <form action="/users/register" method="post" enctype="multipart/form-data">
                     
                     <h3>Formulario de Registro</h3>
-                    <input name="name" placeholder="Nombre y Apellido"><br>
+
+                    <input name="fullName" placeholder="Nombre y Apellido"
+                        class='<%= locals.errorMessages && errorMessages.fullName ? 'input-error' : null %>'
+                        value='<%= locals.oldData && !errorMessages.fullName ? oldData.fullName : null %>'><br>
+
+                    <div class="error"><h6><%= locals.errorMessages && errorMessages.fullName ? errorMessages.fullName.msg : null %></h6></div>
                     
                     <label for>Fecha de nacimiento</label><br>
                     <input name="birthDate" type="date" value="1900-01-01"><br>
+                    
+                    <input name="userName" placeholder="Nombre de Usuario"
+                        class='<%= locals.errorMessages && errorMessages.userName ? 'input-error' : null %>'
+                        value='<%= locals.oldData?oldData.userName:null %>'><br>
+                    
+                    <div class="error"><h6><%= locals.errorMessages && errorMessages.userName ? errorMessages.userName.msg : null %></h6></div>
+                    
+                    <input name="email" type="text" placeholder="Correo electrónico"
+                        class='<%= locals.errorMessages && errorMessages.email ? 'input-error' : null %>'
+                        value='<%= locals.oldData && !errorMessages.email ? oldData.email : null %>'><br>
 
-                    <input name="userName" placeholder="Nombre de Usuario"><br>
+                    <div class="error"><h6><%= locals.errorMessages && errorMessages.email ? errorMessages.email.msg : null %></h6></div>
+                    
+                    <input name="phone" type="tel" placeholder="Teléfono"
+                        class='<%= locals.errorMessages && errorMessages.phone ? 'input-error' : null %>'
+                        value='<%= locals.oldData?oldData.phone:null %>'><br>
                 
-                    <input name="email" type="email" placeholder="Correo electrónico"><br>
+                    <div class="error"><h6><%= locals.errorMessages && errorMessages.phone ?errorMessages.phone.msg : null %></h6></div>
                     
-                    <input name="phone" type="tel" placeholder="Teléfono"><br>
+                    <input name="address" type="text" placeholder="Domicilio"
+                        class='<%= locals.errorMessages && errorMessages.address ? 'input-error' : null %>'
+                        value='<%= locals.oldData?oldData.address:null %>'><br>
+                
+                    <div class="error"><h6><%= locals.errorMessages && errorMessages.address ?errorMessages.address.msg : null %></h6></div>
                     
-                    <input name="location" type="text" placeholder="Domicilio"><br>
-                    
-                    <select>
-                        <option value="">Elije un país</option>
+                    <select name="location">
+                        <option value=''>Elije un país</option>
                     
                         <%for(const oneLocation of location){%>
-                            <option value="<%=oneLocation.value%>"><%=oneLocation.country%></option>
+                            <option value="<%= oneLocation.value %>"><%= oneLocation.country %></option>
                         <%}%>
+
                     </select>
 
+                    <div class="error"><h6><%= locals.errorMessages && errorMessages.location ?errorMessages.location.msg : null %></h6></div>
                     <label>Foto de usuario</label><br>
-                    <input type="file" name="avatar" accept=".jpg"><br>
+                    <input type="file" name="avatarImage" accept=".jpg,.jpeg"><br>
+                    
+                    <div class="error"><h6><%= locals.errorMessages && errorMessages.avatarImage ? errorMessages.avatarImage.msg : null %></h6></div>
+                    
+                    <input type="password" name="password" placeholder="Ingrese contraseña"
+                        class='<%= locals.errorMessages && errorMessages.password ? 'input-error' :null %>'
+                        value='<%= locals.oldData && !errorMessages.password ? oldData.password:null %>'><br>
 
-                    <input type="text" name="password" placeholder="Ingrese contraseña" ><br>
-                    <input type="text" name="pass-repeat" placeholder="Confirme contraseña" ><br>
+                    <div class="error"><h6><%= locals.errorMessages && errorMessages.password ? errorMessages.password.msg : null %></h6></div>
+                    
+                    <input type="password" name="passRepeat" placeholder="Confirme contraseña"
+                        class='<%= locals.errorMessages && errorMessages.passRepeat ? 'input-error' : null %>'
+                        value='<%= locals.oldData && !errorMessages.passRepeat ? oldData.passRepeat : null %>'><br>
+
+                    
+                    <div class="error"><h6><%= locals.errorMessages && errorMessages.passRepeat ? errorMessages.passRepeat.msg : null %></h6></div>
+                    
                     <div class="line-arrange">
                         <button class="sqr-button med-button button-01" type="submit">Enviar</button>
                         <button class="sqr-button med-button button-02" type="reset">Reset</button>
                     </div>
                 </form>
-                <%if(locals.errorMessages){%>
-                    <%errorMessages.forEach(e=>{%>
-                        <p><%=e.msg%></p>                        
-                    <%});
-                }%>
             </div>
         </div>
     </main>

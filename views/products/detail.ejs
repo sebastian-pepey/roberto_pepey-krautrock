@@ -7,7 +7,7 @@
 <body>
 
     <!-- nav -->
-    <%- include('../partials/nav')%>
+    <%- include('../partials/nav',{user})%>
 
     <!-- header -->
     <%- include('../partials/header')%>
@@ -17,10 +17,10 @@
     <main>
         <div id="product-item">
             <div id="pictures" class="border">
-                <img class="big-pic" src="/img/<%=productToShow.image[0].filename%>" alt="">
+                <img class="big-pic" src="/img/products/<%=productToShow.image[0].filename%>" alt="">
                 <div class="horizontal-div">
                     <%for(let i=1;i<productToShow.image.length;i++){%>
-                        <img class="small-pic" src="/img/<%=productToShow.image[i].filename%>" alt="">   
+                        <img class="small-pic" src="/img/products/<%=productToShow.image[i].filename%>" alt="">   
                     <%}%>
                 </div>
             </div>

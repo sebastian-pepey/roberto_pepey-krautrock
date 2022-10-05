@@ -1,6 +1,6 @@
 [
     {
-        "value":"arg",
+        "value":"Argentina",
         "country": "Argentina",
         "provinces": [
             "Buenos Aires",
@@ -29,7 +29,7 @@
             "Tucumán"
         ]
     }, {
-        "value":"chl",
+        "value":"Chile",
         "country": "Chile",
         "provinces": [
             "Arica-Parinacota",
@@ -50,7 +50,7 @@
             "Magallanes"
         ]
     }, {
-        "value":"brs",
+        "value":"Brasil",
         "country": "Brasil",
         "provinces": [
             "Acre",

@@ -61,6 +61,7 @@ a{
 
 h6{
     font-size: 1rem;
+    margin:0 1rem 0.5rem 0;
 }
 
 .line-through{
@@ -69,6 +70,11 @@ h6{
 }
 
 .text-emphasis-01{
+    color: var(--enfasis);
+    font-weight: bold;
+}
+
+.error{
     color: var(--enfasis);
     font-weight: bold;
 }
@@ -316,7 +322,7 @@ section.cta-error{
 section.cta-login{
     margin: 0.5rem 0;
     width: 100%;
-    height: 15rem;
+    height: 35vh;
     background-image: url("/img/instruments.jpg");
     background-size: cover;
 }
@@ -373,6 +379,11 @@ input,textarea, select{
     margin-bottom: 0.7rem;
     border: 1px solid var(--background);
     border-radius: 3px;
+}
+
+.input-error{
+    border: 1.5px solid var(--enfasis);
+    box-shadow: 0rem 0rem 0.3rem var(--enfasis);
 }
 
 textarea{
@@ -728,6 +739,34 @@ div.horizontal-div{
     box-shadow: 0rem 0rem 1.5rem var(--claro-02);
 }
 
+/* Usuario */
+
+.light-text{
+    color: var(--claro);
+}
+
+#user-info{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--boton);
+    padding: 3rem;
+    align-items: center;
+}
+
+#user-info div{
+    display: flex;
+    margin-left: 5rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#profile-pic{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 @media(min-width:768px){
 
     header a h1{
@@ -831,6 +870,10 @@ div.horizontal-div{
     
     #product-info{
         width: 35%;
+    }
+
+    #user-info{
+        flex-direction: row;
     }
 }
 

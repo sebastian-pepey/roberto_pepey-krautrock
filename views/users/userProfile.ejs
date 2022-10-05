@@ -7,13 +7,23 @@
 <body>
 
     <!-- nav -->
-    <%- include('../partials/nav',{user})%>
+    <%- include('../partials/nav')%>
 
     <!-- header -->
     <%- include('../partials/header')%>
 
+    <div id="user-info">
+        <img id="profile-pic" src="/img/users/<%=user.avatar%>" alt="profile_picture">
+        <div>
+            <h2 class="light-text"><%=user.name %></h2>
+            <h3 class="light-text"><%=user.email %></h3>
+            <p class="light-text">Pais <%=user.location %></p>
+            <p class="light-text">Rating <%=user.rating %></p>
+        </div>
+    </div>
+
     <main>
-        <h2>Todos los productos</h2>
+        <h2>Mis productos</h2>
         <section class="carrousel">
             <%for(p of products){%>
                 <%- include('../products/article',{p})%>
