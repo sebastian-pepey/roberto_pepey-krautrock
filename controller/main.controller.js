@@ -1,12 +1,10 @@
 const fs=require('fs');
 
-const products=JSON.parse(fs.readFileSync('data/productsDataBase.json',{encoding:'utf-8'}));
-
-const loggedUser=undefined;
-
 const mainController={
 
     main: (req,res)=>{
+
+        const products=JSON.parse(fs.readFileSync('data/productsDataBase.json',{encoding:'utf-8'}));
 
         res.render('main/main',{products,user:req.session.userLogged});
 

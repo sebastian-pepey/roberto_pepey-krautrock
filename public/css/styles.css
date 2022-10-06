@@ -767,6 +767,12 @@ div.horizontal-div{
     object-fit: cover;
 }
 
+.product_img{
+    width: 20rem;
+    height: 25rem;
+    object-fit: cover;
+}
+
 @media(min-width:768px){
 
     header a h1{

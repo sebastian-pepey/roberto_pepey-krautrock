@@ -6,6 +6,8 @@ const mainRouter=require(path.join(__dirname,"/routes/main.routes"));
 const productsRouter=require(path.join(__dirname,"/routes/products.routes"));
 const usersRouter=require(path.join(__dirname,"/routes/users.routes"));
 const session=require('express-session');
+const cookieParser = require('cookie-parser');
+const rememberUser=require('./middleware/rememberUser.middleware');
 
 //MIDDLEWARE
 
@@ -23,9 +25,11 @@ app.use(session({
     saveUninitialized:false,
 }));
 
-//RUTAS
-
 app.use(cookieParser());
+
+app.use(rememberUser);
+
+//RUTAS
 
 app.use('/',mainRouter);
 

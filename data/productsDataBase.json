@@ -260,7 +260,7 @@
   "sold": false,
   "used": false,
   "origPrice": 3354,
-  "discount": true,
+  "discount": false,
   "discountAmount": 15,
   "freeShipment": true,
   "payments": true
@@ -331,5 +331,60 @@
   "discountAmount": 0,
   "freeShipment": true,
   "payments": false
+ },
+ {
+  "id": 1799775,
+  "name": "Mandolina",
+  "origPrice": 10000,
+  "quantity": 1,
+  "description": "Hermosa Mandolina.",
+  "discount": false,
+  "discountAmount": 0,
+  "userId": 8,
+  "freeShipment": true,
+  "payments": true,
+  "image": [
+   {
+    "fieldname": "productImage",
+    "originalname": "IMG_2517.JPEG",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "D:\\_projects\\fullstack digital house\\01 - Full Stack\\_proyecto_final\\krautrock\\roberto_pepey-krautrock\\public\\img\\products",
+    "filename": "products_1665026325320.JPEG",
+    "path": "D:\\_projects\\fullstack digital house\\01 - Full Stack\\_proyecto_final\\krautrock\\roberto_pepey-krautrock\\public\\img\\products\\products_1665026325320.JPEG",
+    "size": 2563394
+   },
+   {
+    "fieldname": "productImage",
+    "originalname": "IMG_2518.JPEG",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "D:\\_projects\\fullstack digital house\\01 - Full Stack\\_proyecto_final\\krautrock\\roberto_pepey-krautrock\\public\\img\\products",
+    "filename": "products_1665026325383.JPEG",
+    "path": "D:\\_projects\\fullstack digital house\\01 - Full Stack\\_proyecto_final\\krautrock\\roberto_pepey-krautrock\\public\\img\\products\\products_1665026325383.JPEG",
+    "size": 1913579
+   },
+   {
+    "fieldname": "productImage",
+    "originalname": "IMG_2519.JPEG",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "D:\\_projects\\fullstack digital house\\01 - Full Stack\\_proyecto_final\\krautrock\\roberto_pepey-krautrock\\public\\img\\products",
+    "filename": "products_1665026325422.JPEG",
+    "path": "D:\\_projects\\fullstack digital house\\01 - Full Stack\\_proyecto_final\\krautrock\\roberto_pepey-krautrock\\public\\img\\products\\products_1665026325422.JPEG",
+    "size": 1979613
+   },
+   {
+    "fieldname": "productImage",
+    "originalname": "IMG_2520.JPEG",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "D:\\_projects\\fullstack digital house\\01 - Full Stack\\_proyecto_final\\krautrock\\roberto_pepey-krautrock\\public\\img\\products",
+    "filename": "products_1665026325471.JPEG",
+    "path": "D:\\_projects\\fullstack digital house\\01 - Full Stack\\_proyecto_final\\krautrock\\roberto_pepey-krautrock\\public\\img\\products\\products_1665026325471.JPEG",
+    "size": 2780343
+   }
+  ],
+  "sold": false
  }
 ]

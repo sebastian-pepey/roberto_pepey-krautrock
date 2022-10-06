@@ -81,6 +81,11 @@ const usersController = {
 
             req.session.userLogged=loggedUser;
 
+            if(req.body.remain_connected){
+                
+                res.cookie('remUser',loggedUser.id,{maxAge:1000*60*30})
+            }
+
             res.redirect('/');
 
         } else {

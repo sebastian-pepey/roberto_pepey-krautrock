@@ -105,5 +105,18 @@
   "avatar": "default_avatar.jpg",
   "password": "$2a$10$plG3PkSUooUHAMn6sfg6u.gJWTab6eyEWa8yJHVQ4hjWLoC5a7cnW",
   "rating": 0
+ },
+ {
+  "id": 9,
+  "name": "Loco",
+  "birthDate": "1900-01-01",
+  "userName": "loco",
+  "email": "loco@loco.com",
+  "phone": "1123333333",
+  "address": "Calle Falsa 11001",
+  "location": "Argentina",
+  "avatar": "users_1665027454477.JPEG",
+  "password": "$2a$10$Z.8B3ea.rMa25jL23VZyNeSQ9qq1TiRWHW487fmGagNdfljykD49S",
+  "rating": 0
  }
 ]
