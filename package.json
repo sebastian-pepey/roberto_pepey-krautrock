@@ -4,7 +4,7 @@
   "description": "e-commerce | venta de instrumentos musicales",
   "main": "app.js",
   "scripts": {
-    "poke": "node app.js",
+    "start": "node app.js",
     "pokemon": "nodemon app.js"
   },
   "repository": {
