@@ -24,6 +24,9 @@ app.use(session({
 }));
 
 //RUTAS
+
+app.use(cookieParser());
+
 app.use('/',mainRouter);
 
 app.use('/products',productsRouter);
@@ -31,7 +34,6 @@ app.use('/products',productsRouter);
 app.use('/users',usersRouter);
 
 app.use((req,res,next)=>{res.status(404).render('main/error')})
-
 
 app.set('view engine','ejs');
 

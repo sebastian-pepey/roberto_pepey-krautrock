@@ -39,7 +39,7 @@ const productsController = {
             description: req.body.description,
             discount:req.body.discount==="on",
             discountAmount:(req.body.discount==="on"?1:0)*parseInt(req.body.discount_amount),
-            userId: 2,
+            userId: req.session.userLogged.id,
             freeShipment:req.body.free_shipment==="on",
             payments:req.body.payments==="on",
             image: req.files,
@@ -57,7 +57,7 @@ const productsController = {
 
         const products = JSON.parse(fs.readFileSync('data/productsDataBase.json', {encoding: 'utf-8'}));
 
-        res.render('products/products', {products,user:res.session.userLogged});
+        res.render('products/products', {products,user:req.session.userLogged});
 
     },
 
@@ -71,7 +71,7 @@ const productsController = {
 
         const userToShow = users.find(e => e.id === productToShow.userId);
 
-        res.render('products/detail', {productToShow, userToShow, user:res.session.userLogged})
+        res.render('products/detail', {productToShow, userToShow, user:req.session.userLogged})
     },
 
     cart: (req, res) => {
@@ -84,11 +84,11 @@ const productsController = {
 
         const userToShow = users.find(e => e.id === productToShow.userId);
 
-        res.render('products/cart', {productToShow, userToShow, user:res.session.userLogged});
+        res.render('products/cart', {productToShow, userToShow, user:req.session.userLogged});
     },
 
     showForm: (req, res) => {
-        res.render('products/create-product', {user:res.session.userLogged});
+        res.render('products/create-product', {user:req.session.userLogged});
     },
 
     // UPDATE
@@ -99,7 +99,7 @@ const productsController = {
 
         const productToShow = products.find(e => e.id === parseInt(req.params.id));
 
-        res.render('products/edit-product', {productToShow, user:res.session.userLogged})
+        res.render('products/edit-product', {productToShow, user:req.session.userLogged})
     },
 
     editProduct: (req, res) => {   

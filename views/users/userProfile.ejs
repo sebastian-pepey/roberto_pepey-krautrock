@@ -2,7 +2,7 @@
 <html lang="en">
 
     <!-- head -->
-    <%- include('../partials/head',{title:"productos"})%>
+    <%- include('../partials/head',{title:"perfil"})%>
     
 <body>
 
@@ -19,7 +19,9 @@
             <h3 class="light-text"><%=user.email %></h3>
             <p class="light-text">Pais <%=user.location %></p>
             <p class="light-text">Rating <%=user.rating %></p>
+            <a href="/users/logout" class="btn-full sqr-button button-01">Logout</a>
         </div>
+
     </div>
 
     <main>

@@ -38,4 +38,6 @@ router.post('/register',[fileUpload.single('avatarImage'),userRegisterValidation
 
 router.get('/profile',usersController.profile);
 
+router.get('/logout',usersController.logout);
+
 module.exports=router;

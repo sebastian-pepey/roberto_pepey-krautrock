@@ -506,7 +506,7 @@ section.cta-main div h1{
     justify-content: space-between;
 }
 
-#product-info a, .line-arrange a{
+#product-info a, .line-arrange a, #user-info a{
     text-align: center;
     text-decoration: none;
     padding-top: 0.5rem;

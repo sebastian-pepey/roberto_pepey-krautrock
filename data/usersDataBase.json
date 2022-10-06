@@ -92,5 +92,18 @@
   "avatar": "users_1664922934465.jpg",
   "password": "$2a$10$MKsS7n7uCNfHcLsYruZlZuggeYMqKVkdpa/uRuy0MEUYgKVR4/2iK",
   "rating": 0
+ },
+ {
+  "id": 8,
+  "name": "Sebastian Pepe",
+  "birthDate": "1900-01-01",
+  "userName": "robert-ppy",
+  "email": "roberto@pepey.com",
+  "phone": "1166778899",
+  "address": "Calle Falsa 444",
+  "location": "Argentina",
+  "avatar": "default_avatar.jpg",
+  "password": "$2a$10$plG3PkSUooUHAMn6sfg6u.gJWTab6eyEWa8yJHVQ4hjWLoC5a7cnW",
+  "rating": 0
  }
 ]

@@ -14,7 +14,7 @@ const usersController = {
     // CREATE
 
     register: (req, res) => {
-        res.render('users/register', {location, user:res.session.userLogged});
+        res.render('users/register', {location, user:req.session.userLogged});
     },
 
     save: (req, res) => {
@@ -25,17 +25,14 @@ const usersController = {
 
             const oldData = req.body;
 
-            console.log(error.mapped());
-
             res.render('users/register', {
                 errorMessages: error.mapped(),
                 oldData,
                 location,
-                user:res.session.userLogged
+                user:req.session.userLogged
             })
 
         } else if(User.findByField('email',req.body.email)!==undefined){
-            console.log('pasó por aca');
 
             const oldData = req.body;
 
@@ -43,7 +40,7 @@ const usersController = {
                 errorMessages: {email: {msg: 'Este usuario ya se encuentra registrado'}},
                 oldData,
                 location,
-                user:res.session.userLogged
+                user:req.session.userLogged
             });
 
         }else{
@@ -61,7 +58,7 @@ const usersController = {
             }
 
             User.create(userToSave);
-            res.render('users/register-success', {user:res.session.userLogged});
+            res.render('users/register-success', {user:req.session.userLogged});
 
         }
     },
@@ -87,7 +84,7 @@ const usersController = {
             res.redirect('/');
 
         } else {
-            res.render('users/user-error', {user:res.session.userLogged});
+            res.render('users/user-error');
         }
     },
 
@@ -104,12 +101,15 @@ const usersController = {
 
     deleteUser:{
 
-        // const product=products.find(e=>e.id==parseInt(req.params.id));
+    },
 
-        // deleteFiles(product.image,'default-image.png','./../public/img/products/');
+    logout:(req, res) => {
+
+        req.session.destroy();
+
+        res.redirect('/');
     }
     
-
 }
 
 module.exports = usersController;

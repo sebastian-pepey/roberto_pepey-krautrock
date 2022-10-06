@@ -7,7 +7,9 @@ const loggedUser=undefined;
 const mainController={
 
     main: (req,res)=>{
-        res.render('main/main',{products,loggedUser});
+
+        res.render('main/main',{products,user:req.session.userLogged});
+
     },
 
 }
