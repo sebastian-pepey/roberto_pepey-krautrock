@@ -10,7 +10,7 @@
     <%- include('../partials/nav')%>
 
     <!-- header -->
-    <%- include('../partials/header')%>
+    <%- include('../partials/header',{categories})%>
 
     <main>
         <div class="register-form">
@@ -18,6 +18,8 @@
                 <form action="/users/register" method="post" enctype="multipart/form-data">
                     
                     <h3>Formulario de Registro</h3>
+
+                    <div id="errors"></div>
 
                     <input name="fullName" placeholder="Nombre y Apellido"
                         class='<%= locals.errorMessages && errorMessages.fullName ? 'input-error' : null %>'
@@ -91,6 +93,10 @@
 
     <!-- footer -->
     <%- include('../partials/footer')%>
+
+    <!-- <script src="/js/location.js"></script> -->
+
+    <script src="/js/userValidation.js"></script>
 
 </body>
 </html>

@@ -79,6 +79,12 @@ h6{
     font-weight: bold;
 }
 
+.error-sign{
+    background-color: var(--boton);
+    margin: 1rem 0 1rem;
+    padding: 1rem 0 1rem 2rem;
+}
+
 .text-emphasis-02{
     color: var(--correcto);
     font-weight: bold;

@@ -7,10 +7,10 @@
 </header>
 
 <div class="horizontal" id="inf-menu">
-    <a class="link" href="/products"><p>Guitarras</p></a>
-    <a class="link" href="/products/create"><p>Pedales y Amplificadores</p></a>
-    <a class="link" href="/users/register"><p>Teclados y Sintetizadores</p></a>
-    <a class="link" href="/users/login"><p>Percusión</p></a>
-    <a class="link" href="/users/login"><p>Audio Profesional</p></a>
+    <% for (category of categories){ %>
+        <a class="link" href="/products/category/<%= category.id %>"><p><%= category.name %></p></a>
+    <% } %>
+
     <a class="link" href="/products"><p>Todos los Productos</p></a>
+
 </div>

@@ -10,9 +10,9 @@
         <%- include('../partials/nav')%>
 
         <!-- header -->
-        <%- include('../partials/header')%>
+        <%- include('../partials/header',{categories})%>
 
-        <%let finalPrice=Math.ceil(productToShow.origPrice*(1-productToShow.discountAmount/100))%>
+        <%let finalPrice=Math.ceil(product.list_price*(1-product.discount_amount/100))%>
 
         <main>
             <h2>Agregado al carrito!</h2>
@@ -84,11 +84,11 @@
                 <div class="col-20">
                     <div class="container column">
                         <div>
-                            <h3><%=productToShow.name%></h3>
+                            <h3><%=product.name%></h3>
                             <h2 class="price">$<%=finalPrice%></h2>
-                            <p>Vendedor: <%=userToShow.name%></p>
+                            <p>Vendedor: <%=product.user[0].name%></p>
                         </div>
-                        <img class="small-pic" src="/img/products/<%=productToShow.image[0].filename%>" alt="">
+                        <img class="small-pic" src="/img/products/<%=product.image[0].name%>" alt="">
                     </div>
                 </div>
             </div>

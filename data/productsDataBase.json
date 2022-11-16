@@ -136,7 +136,7 @@
   "id": 1799772,
   "name": "Casio CZ 101",
   "price": "537",
-  "userId": 2,
+  "userId": 5,
   "quantity": 2,
   "description": "La Serie CZ de Casio fue una familia de sintetizadores por distorsión de fase (phase distortion synthesis) de bajo costo fabricados por la empresa Casio Computer Co., Ltd. a mediados de la década de 1980. Fueron lanzados ocho modelos de sintetizadores CZ: CZ-101, CZ-230S, CZ-1000, CZ-2000S, CZ-2600S, CZ-3000, CZ-5000 y CZ-1. El modelo de teclado doméstico CT-6500 usó 48 distorsiones de fase preajustadas de la línea CZ. La serie CZ fue una serie de sintetizadores notablemente flexibles y su precio hizo accesible el uso de sintetizadores programables por parte de las bandas de garaje.",
   "image": [
@@ -194,7 +194,7 @@
   "sold": false,
   "origPrice": 459,
   "discount": true,
-  "discountAmount": 10,
+  "discountAmount": 20,
   "freeShipment": true,
   "payments": false
  },
@@ -202,7 +202,7 @@
   "id": 1799773,
   "name": "Les Paul Standard",
   "price": "3354",
-  "userId": 2,
+  "userId": 7,
   "quantity": 5,
   "description": "La Gibson Les Paul es un modelo de guitarra eléctrica y bajo de la marca Gibson Guitar Corporation. Fabricada desde 1952, la Gibson Les Paul es extensamente considerada, junto con la Fender Stratocaster, la guitarra eléctrica de cuerpo macizo más popular del mundo.​",
   "image": [
@@ -269,7 +269,7 @@
   "id": 1799774,
   "name": "Fender Telecaster",
   "price": "2230",
-  "userId": 2,
+  "userId": 5,
   "quantity": 2,
   "description": "La Fender Telecaster es una guitarra eléctrica de cuerpo macizo mundialmente conocida, llamada \"la tabla\" en sus comienzos. Se caracteriza por la simplicidad en su diseño y por el sonido que se obtiene de sus dos pastillas de bobinado simple o single coil.",
   "image": [
@@ -327,8 +327,8 @@
   "sold": false,
   "used": false,
   "origPrice": 2230,
-  "discount": false,
-  "discountAmount": 0,
+  "discount": true,
+  "discountAmount": 20,
   "freeShipment": true,
   "payments": false
  },
@@ -338,8 +338,8 @@
   "origPrice": 10000,
   "quantity": 1,
   "description": "Hermosa Mandolina.",
-  "discount": false,
-  "discountAmount": 0,
+  "discount": true,
+  "discountAmount": 10,
   "userId": 8,
   "freeShipment": true,
   "payments": true,
@@ -383,6 +383,51 @@
     "filename": "products_1665026325471.JPEG",
     "path": "D:\\_projects\\fullstack digital house\\01 - Full Stack\\_proyecto_final\\krautrock\\roberto_pepey-krautrock\\public\\img\\products\\products_1665026325471.JPEG",
     "size": 2780343
+   }
+  ],
+  "sold": false
+ },
+ {
+  "id": 1799776,
+  "name": "Radio",
+  "origPrice": 10000,
+  "quantity": 1,
+  "description": "Radio",
+  "discount": true,
+  "discountAmount": 10,
+  "userId": 6,
+  "freeShipment": false,
+  "payments": false,
+  "image": [
+   {
+    "fieldname": "productImage",
+    "originalname": "radio_01.jpg",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "D:\\_projects\\coding\\Full Stack Digital House\\proyecto_final\\roberto_pepey-krautrock\\public\\img\\products",
+    "filename": "products_1665108986405.jpg",
+    "path": "D:\\_projects\\coding\\Full Stack Digital House\\proyecto_final\\roberto_pepey-krautrock\\public\\img\\products\\products_1665108986405.jpg",
+    "size": 52748
+   },
+   {
+    "fieldname": "productImage",
+    "originalname": "radio_02.jpg",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "D:\\_projects\\coding\\Full Stack Digital House\\proyecto_final\\roberto_pepey-krautrock\\public\\img\\products",
+    "filename": "products_1665108986410.jpg",
+    "path": "D:\\_projects\\coding\\Full Stack Digital House\\proyecto_final\\roberto_pepey-krautrock\\public\\img\\products\\products_1665108986410.jpg",
+    "size": 212363
+   },
+   {
+    "fieldname": "productImage",
+    "originalname": "radio_03.jpg",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "D:\\_projects\\coding\\Full Stack Digital House\\proyecto_final\\roberto_pepey-krautrock\\public\\img\\products",
+    "filename": "products_1665108986414.jpg",
+    "path": "D:\\_projects\\coding\\Full Stack Digital House\\proyecto_final\\roberto_pepey-krautrock\\public\\img\\products\\products_1665108986414.jpg",
+    "size": 85734
    }
   ],
   "sold": false

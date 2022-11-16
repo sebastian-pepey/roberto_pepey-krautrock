@@ -1,17 +1,17 @@
-<%let finalPrice=Math.ceil(p.origPrice*(1-p.discountAmount/100))%>
+<%let finalPrice=p.list_price*(1-p.discount_amount/100)%>
 
 <a class="link" href="/products/<%=p.id%>"><article>
-    <img src="/img/products/<%=p.image[0].filename%>" alt="" class="product_img">
+    <img src="/img/products/<%=p.image[0].name%>" alt="" class="product_img">
     <div class="main-article">
         <h3 class="description"><%=p.name%></h3>
         <%if(p.discount){%>
-            <p class="line-through inf-hidden">$<%=p.origPrice%></p>
+            <p class="line-through inf-hidden">$<%=p.list_price%></p>
             <div class="horizontal">
-                <p class="text-emphasis-01">$<%=finalPrice%></p>
-                <p class="text-emphasis-02"><%=p.discountAmount%>% OFF</p>
+                <p class="text-emphasis-01">$<%=parseFloat(finalPrice).toFixed(2)%></p>
+                <p class="text-emphasis-02"><%=p.discount_amount%>% OFF</p>
             </div>
         <%}else{%>
-            <p class="text-emphasis-01">$<%=finalPrice%></p>
+            <p class="text-emphasis-01">$<%=parseFloat(finalPrice).toFixed(2)%></p>
         <%}%>
         
         <%let estado=(p.used===true)?"Usado":"Nuevo"%>
@@ -19,7 +19,7 @@
         <%if(p.payments){%>
             <h5 class="inf-hidden">Cuotas sin Interés</h5>
         <%}%>
-        <%if(p.freeShipment){%>
+        <%if(p.free_shipment){%>
             <p class="text-emphasis-02 inf-hidden">Envíos Gratis</p>
         <%}%>  
     </div>

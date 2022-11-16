@@ -7,7 +7,8 @@ const productsRouter=require(path.join(__dirname,"/routes/products.routes"));
 const usersRouter=require(path.join(__dirname,"/routes/users.routes"));
 const session=require('express-session');
 const cookieParser = require('cookie-parser');
-const rememberUser=require('./middleware/rememberUser.middleware');
+const rememberUser=require('./middlewares/rememberUser.middleware');
+const db = require('./database/models');
 
 //MIDDLEWARE
 
@@ -37,7 +38,12 @@ app.use('/products',productsRouter);
 
 app.use('/users',usersRouter);
 
-app.use((req,res,next)=>{res.status(404).render('main/error')})
+app.use(async (req,res,next)=>{
+
+    let categories = await db.Category.findAll();
+
+    res.status(404).render('main/error',{categories});
+})
 
 app.set('view engine','ejs');
 

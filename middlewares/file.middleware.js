@@ -5,15 +5,12 @@ let destPath,fileName;
 let multerDiskStorage=multer.diskStorage({
 
     destination:(req,file,cb)=>{
-        switch (req.route.path){
-            case '/register':
+        if (req.route.path === '/register'){
                 destPath='../public/img/users';
                 fileName='users_';
-                break;          
-            case '/create':
-                destPath='../public/img/products';
-                fileName='products_';
-                break;
+        } else {
+            destPath='../public/img/products';
+            fileName='products_';
         }
 
         let folder=path.join(__dirname,destPath);

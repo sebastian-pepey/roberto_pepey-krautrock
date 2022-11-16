@@ -10,43 +10,65 @@
     <%- include('../partials/nav')%>
 
     <!-- header -->
-    <%- include('../partials/header')%>
+    <%- include('../partials/header',{categories})%>
     
     <main>
         <div class="register-form">
             <div class="container">
-                <form action="/products/<%=productToShow.id%>/edit?_method=PUT" method="post" enctype="multipart/form-data">
+                <form action="/products/<%= locals.oldData && !errorMessages.name ? oldData.id : product.id %>/edit?_method=PUT" method="post" enctype="multipart/form-data">
                     <h3>Formulario de Edición de Producto</h3>
 
-                    
-                    <input name="name" value="<%=productToShow.name%>" required>
-                    
-                    <input name="orig_price" value="<%=productToShow.origPrice%>" required>
+                    <div id="errors"></div>
 
-                    <input name="quantity" type="number" value="<%=productToShow.quantity%>" required>
-                    
-                    <textarea name="description" placeholder="Descripción" required><%=productToShow.description%></textarea>
+                    <input name="name" value='<%= locals.oldData && !errorMessages.name ? oldData.name : product.name %>' class='<%= locals.errorMessages && errorMessages.name ? 'input-error' : null %>'><br>
 
+                    <div class="error"><h6><%= locals.errorMessages && errorMessages.name ? errorMessages.name.msg : null %></h6></div>
+                    
+                    <input name="list_price" value='<%= locals.oldData && !errorMessages.list_price ? oldData.list_price : product.list_price %>' class='<%= locals.errorMessages && errorMessages.list_price ? 'input-error' : null %>'><br>
+
+                    <div class="error"><h6><%= locals.errorMessages && errorMessages.list_price ? errorMessages.list_price.msg : null %></h6></div>
+
+                    <input name="quantity" type="number" value='<%= locals.oldData && !errorMessages.quantity ? oldData.quantity : product.quantity %>' class='<%= locals.errorMessages && errorMessages.quantity ? 'input-error' : null %>'><br>
+
+                    <div class="error"><h6><%= locals.errorMessages && errorMessages.quantity ? errorMessages.quantity.msg : null %></h6></div>
+
+                    <textarea name="description" placeholder="Descripción" class='<%= locals.errorMessages && errorMessages.description ? 'input-error' : null %>'><%= locals.oldData && !errorMessages.description ? oldData.description : product.description %></textarea><br>
+                    
+                    <div class="error"><h6><%= locals.errorMessages && errorMessages.description ? errorMessages.description.msg : null %></h6></div>
+                    
                     <div class="line-arrange">
-                        <label><input type="checkbox" name="discount" class="checkbox" <%=productToShow.discount?'checked':''%>>Este producto tiene un descuento</label>
-                        <input class="col-30" name="discount_amount" type="number" value="<%=productToShow.quantity%>" required>
+                        <label><input type="checkbox" name="discount" class="checkbox" <%=product.discount?'checked':''%>>Este producto tiene un descuento</label>
+                        <input class="col-30" name="discount_amount" type="number" value="<%=product.discount_amount%>" >
                     </div>
 
                     <div class="background-emphasis">
                         <p>Modificar condiciones de envío / cuotas</p>
-                        <label><input type="checkbox" name="free_shipment" class="checkbox" <%=productToShow.freeShipment?'checked':''%>>Envíos gratis (costo $25+imp.)</label>
-                        <label><input type="checkbox" name="payments" class="checkbox" <%=productToShow.payments?'checked':''%>>Cuotas sin interés (costo $30+imp.)</label>
+                        <label><input type="checkbox" name="free_shipment" class="checkbox" <%=product.free_shipment?'checked':''%>>Envíos gratis (costo $25+imp.)</label>
+                        <label><input type="checkbox" name="payments" class="checkbox" <%=product.payments?'checked':''%>>Cuotas sin interés (costo $30+imp.)</label>
                     </div>
 
-                    <% var selected=productToShow.used==true?['selected','']:['','selected']%>
+                    <% let selected1=product.used === true?['selected','']:['','selected']%>
 
                     <label for="condition_e">Condición</label>
                     <select name="used" id="condition_e">
-                        <option value=true <%=selected[0]%>>Usado</option>
-                        <option value=false <%=selected[1]%>>Nuevo</option>
+                        <option value=true <%=selected1[0]%>>Usado</option>
+                        <option value=false <%=selected1[1]%>>Nuevo</option>
                     </select>
 
-                    <label>Foto de usuario</label>
+                    <label for="category">Categoria</label>
+                    <select name="category">
+                        <option value=''>Elija una categoria</option>
+                    
+                        <%for(const oneCategory of categories){ %>
+                            <% let selected2 = oneCategory.id === product.id_category || (locals.oldData && !errorMessages.category && parseInt(oldData.category) === oneCategory.id)? 'selected' : '' %>
+                            <option value="<%= oneCategory.id %>" <%= selected2 %>><%= oneCategory.name %></option>
+                        <%}%>
+
+                    </select>
+
+                    <div class="error"><h6><%= locals.errorMessages && errorMessages.category ? errorMessages.category.msg : null %></h6></div>
+
+                    <label>Foto del producto</label>
                     <input type="file" name="productImage" multiple accept=".jpg">
 
                     <div class="line-arrange">
@@ -60,6 +82,8 @@
 
     <!-- footer -->
     <%- include('../partials/footer')%>
+
+    <script src="/js/productValidation.js"></script>
     
 </body>
 </html>
